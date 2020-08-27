@@ -1,0 +1,10 @@
+@import "./help/vars_and_mixins.scss";
+@import "./help/media_mixins.scss";
+
+h1 {
+    @include adaptiv-font(40, 26);
+}
+
+p {
+    @include adaptiv-font(24, 16);
+}
