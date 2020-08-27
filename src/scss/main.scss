@@ -12,4 +12,18 @@
 .wrapper {
 	width: 66%;
 	margin: 0 auto;
+	@include desktop {
+		width: 80%;
+	}
+	@include tablet {
+		width: 95%;
+	}
+}
+
+.test {
+	height: 2000px;
+}
+
+a {
+	cursor: pointer;
 }

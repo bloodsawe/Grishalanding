@@ -213,7 +213,7 @@ function images() {
 							max: 90,
 							min: 80,
 						}),
-						pngquant(),
+						// pngquant(),
 						imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
 					])
 				)
