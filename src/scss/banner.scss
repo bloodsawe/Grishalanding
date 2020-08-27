@@ -1,9 +1,13 @@
 .banner {
+	padding-top: 314px;
 	background: #6832ac;
 }
 
 .form {
 	@include size(411, 411);
+	@include mobile_md {
+		@include size(300, 348);
+	}
 	padding: 18px 38px 27px;
 	background: #ffffff;
 	box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
