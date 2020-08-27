@@ -1,8 +1,14 @@
 .header {
 	position: fixed;
-	top: 39px;
 	width: 100%;
 	z-index: 1000;
+	background: #6832ac;
+	&__wrapper {
+		@include flex(space-between, center, row);
+	}
+	&__logo {
+		display: block;
+	}
 }
 
 .nav {

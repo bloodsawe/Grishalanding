@@ -373,6 +373,11 @@ template {
   text-decoration: none;
 }
 
+.wrapper {
+  width: 66%;
+  margin: 0 auto;
+}
+
 .banner {
   position: relative;
   padding-top: 314px;
@@ -481,9 +486,33 @@ template {
 
 .header {
   position: fixed;
-  top: 39px;
   width: 100%;
   z-index: 1000;
+  background: #6832ac;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header__logo {
+  display: block;
 }
 
 .nav {
