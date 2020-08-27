@@ -374,8 +374,32 @@ template {
 }
 
 .banner {
+  position: relative;
   padding-top: 314px;
+  padding-bottom: 325px;
   background: #6832ac;
+}
+
+.banner__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 66%;
+  margin: 0 auto;
 }
 
 .form {
@@ -457,8 +481,9 @@ template {
 
 .header {
   position: fixed;
-  top: 0;
+  top: 39px;
   width: 100%;
+  z-index: 1000;
 }
 
 .nav {
@@ -479,6 +504,10 @@ template {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  position: absolute;
+  width: 25%;
+  min-width: 487px;
+  right: 17%;
 }
 
 .nav__link {

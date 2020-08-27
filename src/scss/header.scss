@@ -1,11 +1,16 @@
 .header {
 	position: fixed;
-	top: 0;
+	top: 39px;
 	width: 100%;
+	z-index: 1000;
 }
 
 .nav {
 	@include flex(space-between, center, row);
+	position: absolute;
+	width: 25%;
+	min-width: 487px;
+	right: 17%;
 	&__link {
 		display: block;
 		font-size: 16px;

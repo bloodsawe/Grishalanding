@@ -1,6 +1,18 @@
 .banner {
+	position: relative;
 	padding-top: 314px;
+	padding-bottom: 325px;
 	background: #6832ac;
+	&__wrapper {
+		@include flex(flex-end, flex-start, row);
+		width: 66%;
+		margin: 0 auto;
+	}
+	// &__form {
+	// 	position: absolute;
+	// 	top: 314px;
+	// 	right: 320px;
+	// }
 }
 
 .form {
