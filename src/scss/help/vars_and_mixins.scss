@@ -1,38 +1,71 @@
-//Цвета
-$sunyellow: rgb(221, 82, 186);
-$sunflower: #ffca0f;
-$black: #282828;
-$greyishbrown: #505050;
-$browngrey: #b4b4b4;
-$verylightpink: #dcdcdc;
-$white: #ffffff;
+//Colors
+$pink: #ef1f4f;
+$darkyellow: #f7a80d;
+$lightyellow: #fdab00;
+$darkgrey: #888181;
+$lightgrey: #a7a5a5;
+$black: #000;
+$blue: #095173;
+$lightblue: #105272;
+$background: #fafafa;
 
-@mixin flex ($justify, $align, $direction) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
+@mixin flex($justify, $align, $direction) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
 }
 
-@mixin font ($weight, $size, $line-height, $letter-spacing, $color) {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-  letter-spacing: $letter-spacing;
-  color: $color;
+@mixin font($weight, $size, $line-height, $letter-spacing, $color) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+	color: $color;
 }
 
-$maxWidth:1440;
-
-@mixin adaptiv-font($pcSize, $mobSize) {
-  font-size: $pcSize + px;
-  $addSize: $pcSize - $mobSize;
-  $addMobSize: $addSize + $addSize * 0.7;
-  @media (max-width: $maxWidth + px) {
-    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
-  }
-  @media (max-width: 767px) {
-    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
-  }
+@mixin size($width, $height) {
+	width: $width + px;
+	height: $height + px;
 }
 
+$maxWidth: 1300;
+
+@mixin adaptive-font($pcSize, $mobSize, $line-height, $letter-spacing, $color) {
+	font-size: $pcSize + px;
+	line-height: $line-height + px;
+	letter-spacing: $letter-spacing + px;
+	color: $color;
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: $maxWidth + px) {
+		font-size: calc(
+			#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth})
+		);
+	}
+	@media (max-width: 767px) {
+		font-size: calc(
+			#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+		);
+	}
+}
+
+@mixin font($size, $line-height, $letter-spacing, $color) {
+	font-size: $size + px;
+	line-height: $line-height + px;
+	letter-spacing: $letter-spacing + px;
+	color: $color;
+}
+
+@mixin background-img() {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+@mixin position-center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
