@@ -2,7 +2,7 @@
 	position: relative;
 	padding-top: 314px;
 	padding-bottom: 325px;
-	background: #6832ac;
+	background: $purple;
 	&__wrapper {
 		@include flex(flex-end, flex-start, row);
 		width: 66%;
@@ -43,7 +43,7 @@
 		width: 100%;
 		color: #fff;
 		margin: 0 auto;
-		background: #6832ac;
+		background: $purple;
 		border-radius: 10px;
 		outline: none;
 		border: none;
@@ -57,7 +57,7 @@
 		color: #26133e;
 		text-align: center;
 		span {
-			color: #6832ac;
+			color: $purple;
 		}
 	}
 	&__text {

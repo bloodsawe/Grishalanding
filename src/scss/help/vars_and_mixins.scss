@@ -1,13 +1,5 @@
 //Colors
-$pink: #ef1f4f;
-$darkyellow: #f7a80d;
-$lightyellow: #fdab00;
-$darkgrey: #888181;
-$lightgrey: #a7a5a5;
-$black: #000;
-$blue: #095173;
-$lightblue: #105272;
-$background: #fafafa;
+$purple: #6832ac;
 
 @mixin flex($justify, $align, $direction) {
 	display: flex;

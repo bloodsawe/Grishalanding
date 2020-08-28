@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
-	background: #6832ac;
+	background: $purple;
 	&__wrapper {
 		@include flex(space-between, center, row);
 	}
