@@ -5,9 +5,22 @@
 	// background: $purple;
 	background: url(../img/desktop-bg.png) no-repeat center/cover;
 	&__wrapper {
-		@include flex(flex-end, flex-start, row);
+		@include flex(space-between, center, row);
 		width: 66%;
 		margin: 0 auto;
+	}
+	&__title {
+		@include adaptive-font(60, 24, 75, #fff);
+		font-family: "OpenSansRegular", serif;
+		text-transform: capitalize;
+		span {
+			font-family: "OpenSansBold", serif;
+			color: #d5fc01;
+			text-transform: uppercase;
+		}
+	}
+	&__text {
+		@include adaptive-font(22, 14, 38, #fff);
 	}
 	// &__form {
 	// 	position: absolute;
