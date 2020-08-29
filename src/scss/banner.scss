@@ -1,6 +1,7 @@
 .banner {
 	position: relative;
 	padding: 314px 0 325px;
+	background-color: #6832ac;
 	background: url(../img/desktop-bg.png) no-repeat center/cover;
 	@include mobile {
 		background: url(../img/mobile-bg.png) no-repeat center/cover;
@@ -69,15 +70,7 @@
 	}
 	&__button {
 		// font-family: ProximaBold, serif;
-		cursor: pointer;
-		padding: 12px 0;
-		width: 100%;
-		color: #fff;
-		margin: 0 auto;
-		background: $purple;
-		border-radius: 10px;
-		outline: none;
-		border: none;
+		// margin: 0 auto;
 	}
 	&__title {
 		@include font(16, 24, #26133e);

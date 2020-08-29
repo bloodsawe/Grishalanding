@@ -241,9 +241,23 @@ a {
   cursor: pointer;
 }
 
+.button {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0;
+  color: #fff;
+  background: #6832ac;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
 .banner {
   position: relative;
   padding: 314px 0 325px;
+  background-color: #6832ac;
   background: url(../img/desktop-bg.png) no-repeat center/cover;
 }
 
@@ -328,18 +342,6 @@ a {
 
 .form__input:focus {
   outline: none;
-}
-
-.form__button {
-  cursor: pointer;
-  padding: 12px 0;
-  width: 100%;
-  color: #fff;
-  margin: 0 auto;
-  background: #6832ac;
-  border-radius: 10px;
-  outline: none;
-  border: none;
 }
 
 .form__title {
@@ -507,6 +509,20 @@ a {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 56%;
+}
+
+.timers__text {
+  font-size: 24px;
+  line-height: 30px;
+  color: #26133e;
+  font-family: "OpenSansRegular", serif;
+  margin-bottom: 28px;
+}
+
+.timers__button {
+  width: 88%;
+  margin: 0 auto;
 }
 
 .timer {
@@ -539,6 +555,7 @@ a {
   font-size: 48px;
   line-height: 60px;
   color: #6832ac;
+  font-family: "OpenSansBold", serif;
   text-transform: uppercase;
 }
 

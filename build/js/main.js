@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function main() {
   stickyHeader();
   mobileMenu();
+  timer();
 }
 
 function stickyHeader() {
@@ -26,5 +27,20 @@ function mobileMenu() {
     nav.classList.remove("nav__open");
     header.style.background = "";
     header.style.opacity = 0.9;
+  });
+}
+
+function timer() {
+  var timerItems = document.querySelectorAll(".timer__percent");
+  timerItems.forEach(function (item) {
+    var i = 0;
+    var interval = setInterval(function () {
+      item.textContent = "".concat(i, "%");
+      i++;
+
+      if (i > 100) {
+        clearInterval(interval);
+      }
+    }, 20);
   });
 }

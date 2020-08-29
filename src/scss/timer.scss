@@ -6,8 +6,20 @@
 	}
 	&__container {
 		@include flex(space-between, center, row);
+		width: 56%;
 	}
 	&__item {
+	}
+	&__content {
+	}
+	&__text {
+		@include font(24, 30, #26133e);
+		font-family: "OpenSansRegular", serif;
+		margin-bottom: 28px;
+	}
+	&__button {
+		width: 88%;
+		margin: 0 auto;
 	}
 }
 
@@ -19,6 +31,7 @@
 	border-radius: 50%;
 	&__percent {
 		@include font(48, 60, #6832ac);
+		font-family: "OpenSansBold", serif;
 		text-transform: uppercase;
 	}
 	&__text {

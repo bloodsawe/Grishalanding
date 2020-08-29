@@ -31,3 +31,16 @@
 a {
 	cursor: pointer;
 }
+
+.button {
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	padding: 12px 0;
+	color: #fff;
+	background: $purple;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	text-align: center;
+}

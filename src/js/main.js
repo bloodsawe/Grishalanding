@@ -5,4 +5,5 @@ document.addEventListener("DOMContentLoaded", () => {
 function main() {
 	stickyHeader();
 	mobileMenu();
+	timer();
 }
