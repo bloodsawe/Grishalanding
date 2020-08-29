@@ -19,6 +19,9 @@
 	@include tablet {
 		width: 97%;
 	}
+	@include mobile_sm {
+		width: 83%;
+	}
 }
 
 .test {

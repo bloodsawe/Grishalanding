@@ -36,7 +36,7 @@ $maxWidth: 1920;
 	}
 	@media (max-width: 767px) {
 		font-size: calc(
-			#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+			#{$mobSize + px} + #{$addMobSize} * ((100vw - 360px) / #{$maxWidth})
 		);
 	}
 }

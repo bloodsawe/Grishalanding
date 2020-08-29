@@ -323,6 +323,7 @@ a {
   padding: 12px 0 12px 16px;
   border: 1px solid #26133e;
   border-radius: 10px;
+  color: #26133e;
 }
 
 .form__input:focus {
@@ -342,11 +343,11 @@ a {
 }
 
 .form__title {
-  font-weight: bold;
   font-size: 16px;
-  line-height: 172%;
-  text-align: center;
+  line-height: 24px;
   color: #26133e;
+  font-family: ProximaBold, serif;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -358,6 +359,10 @@ a {
   font-size: 16px;
   color: #26133e;
   line-height: 28px;
+}
+
+.form__text span {
+  text-decoration: underline;
 }
 
 .form__text_center {
@@ -499,13 +504,13 @@ a {
 
 @media (max-width: 767px) {
   .banner__title {
-    font-size: -webkit-calc( 24px + 61.2 * ((100vw - 320px) / 1920));
-    font-size: calc( 24px + 61.2 * ((100vw - 320px) / 1920));
+    font-size: -webkit-calc( 24px + 61.2 * ((100vw - 360px) / 1920));
+    font-size: calc( 24px + 61.2 * ((100vw - 360px) / 1920));
   }
 
   .banner__text {
-    font-size: -webkit-calc( 14px + 13.6 * ((100vw - 320px) / 1920));
-    font-size: calc( 14px + 13.6 * ((100vw - 320px) / 1920));
+    font-size: -webkit-calc( 14px + 13.6 * ((100vw - 360px) / 1920));
+    font-size: calc( 14px + 13.6 * ((100vw - 360px) / 1920));
   }
 }
 
@@ -519,6 +524,20 @@ a {
   .banner {
     background: url(../img/mobile-bg.png) no-repeat center/cover;
     padding: 178px 0 53px;
+  }
+
+  .banner__content {
+    margin-bottom: 26px;
+  }
+
+  .banner__title {
+    text-transform: initial;
+    line-height: 30px;
+  }
+
+  .banner__text {
+    line-height: 24px;
+    width: 96%;
   }
 
   .header__wrapper {
@@ -638,5 +657,28 @@ a {
   .form {
     width: 300px;
     height: 348px;
+    padding: 18px 14px 19px;
+  }
+
+  .form__title {
+    font-size: 14px;
+  }
+
+  .form__title br {
+    display: none;
+  }
+
+  .form__text {
+    font-size: 14px;
+  }
+
+  .form__text_fz {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper {
+    width: 83%;
   }
 }

@@ -12,6 +12,11 @@
 			flex-direction: column;
 		}
 	}
+	&__content {
+		@include mobile {
+			margin-bottom: 26px;
+		}
+	}
 	&__title {
 		@include adaptive-font(60, 24, 75, #fff);
 		font-family: "OpenSansRegular", serif;
@@ -21,21 +26,30 @@
 			color: #d5fc01;
 			text-transform: uppercase;
 		}
+		@include mobile {
+			text-transform: initial;
+			line-height: 30px;
+		}
 	}
 	&__text {
 		@include adaptive-font(22, 14, 38, #fff);
+		@include mobile {
+			line-height: 24px;
+			width: 96%;
+		}
 	}
 }
 
 .form {
 	@include size(411, 411);
-	@include mobile_md {
-		@include size(300, 348);
-	}
 	padding: 18px 38px 27px;
 	background: #ffffff;
 	box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
 	border-radius: 20px;
+	@include mobile_md {
+		@include size(300, 348);
+		padding: 18px 14px 19px;
+	}
 	&__container {
 		@include flex(space-between, flex-start, column);
 		height: 100%;
@@ -45,11 +59,16 @@
 		padding: 12px 0 12px 16px;
 		border: 1px solid #26133e;
 		border-radius: 10px;
+		color: #26133e;
 		&:focus {
 			outline: none;
 		}
+		// &::placeholder {
+		// 	color: #26133e;
+		// }
 	}
 	&__button {
+		// font-family: ProximaBold, serif;
 		cursor: pointer;
 		padding: 12px 0;
 		width: 100%;
@@ -61,13 +80,16 @@
 		border: none;
 	}
 	&__title {
-		// @include font(16, 28, )
+		@include font(16, 24, #26133e);
+		font-family: ProximaBold, serif;
 		font-weight: bold;
-		font-size: 16px;
-		line-height: 172%;
 		text-align: center;
-		color: #26133e;
-		text-align: center;
+		@include mobile_md {
+			font-size: 14px;
+			br {
+				display: none;
+			}
+		}
 		span {
 			color: $purple;
 		}
@@ -76,7 +98,15 @@
 		font-size: 16px;
 		color: #26133e;
 		line-height: 28px;
-
+		span {
+			text-decoration: underline;
+		}
+		@include mobile_md {
+			font-size: 14px;
+			&_fz {
+				font-size: 12px;
+			}
+		}
 		&_center {
 			margin: 0 auto;
 		}
