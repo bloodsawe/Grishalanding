@@ -239,7 +239,7 @@ a {
   position: relative;
   padding-top: 314px;
   padding-bottom: 325px;
-  background: #6832ac;
+  background: url(../img/desktop-bg.png) no-repeat center/cover;
 }
 
 .banner__wrapper {
@@ -345,7 +345,9 @@ a {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background: #6832ac;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .header__wrapper {
@@ -370,6 +372,11 @@ a {
 
 .header__logo {
   display: block;
+}
+
+.header.sticky {
+  background: #6832ac;
+  opacity: 0.9;
 }
 
 .nav {
@@ -398,6 +405,7 @@ a {
   display: block;
   font-size: 16px;
   color: #ffffff;
+  line-height: 40px;
 }
 
 @media (max-width: 1200px) {

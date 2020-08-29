@@ -2,7 +2,8 @@
 	position: relative;
 	padding-top: 314px;
 	padding-bottom: 325px;
-	background: $purple;
+	// background: $purple;
+	background: url(../img/desktop-bg.png) no-repeat center/cover;
 	&__wrapper {
 		@include flex(flex-end, flex-start, row);
 		width: 66%;
