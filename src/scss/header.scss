@@ -4,10 +4,42 @@
 	z-index: 1000;
 	transition: all 0.5s;
 	&__wrapper {
-		@include flex(space-between, center, row);
+		@include flex(flex-start, center, row);
+		@include mobile {
+			justify-content: center;
+		}
+	}
+	&__nav {
+		width: 25%;
+		min-width: 487px;
+		margin-left: auto;
+		@include tablet_md {
+			min-width: 400px;
+		}
+		@include tablet_sm {
+			min-width: 380px;
+		}
+		@include mobile {
+			position: fixed;
+			flex-direction: column;
+			top: 0;
+			left: 0;
+			background: red;
+			width: 175px;
+			min-width: auto;
+			background: #ffffff;
+			box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
+			border-radius: 0px 20px 20px 0px;
+		}
 	}
 	&__logo {
 		display: block;
+		@include mobile {
+			width: 132px;
+		}
+		img {
+			width: 100%;
+		}
 	}
 	&.sticky {
 		background: #6832ac;
@@ -17,12 +49,13 @@
 
 .nav {
 	@include flex(space-between, center, row);
-	width: 25%;
-	min-width: 487px;
 	&__link {
 		display: block;
 		font-size: 16px;
 		color: #ffffff;
 		line-height: 40px;
+		@include mobile {
+			color: #26133e;
+		}
 	}
 }

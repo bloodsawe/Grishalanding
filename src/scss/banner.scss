@@ -1,13 +1,16 @@
 .banner {
 	position: relative;
-	padding-top: 314px;
-	padding-bottom: 325px;
-	// background: $purple;
+	padding: 314px 0 325px;
 	background: url(../img/desktop-bg.png) no-repeat center/cover;
+	@include mobile {
+		background: url(../img/mobile-bg.png) no-repeat center/cover;
+		padding: 178px 0 53px;
+	}
 	&__wrapper {
 		@include flex(space-between, center, row);
-		width: 66%;
-		margin: 0 auto;
+		@include tablet {
+			flex-direction: column;
+		}
 	}
 	&__title {
 		@include adaptive-font(60, 24, 75, #fff);
@@ -22,11 +25,6 @@
 	&__text {
 		@include adaptive-font(22, 14, 38, #fff);
 	}
-	// &__form {
-	// 	position: absolute;
-	// 	top: 314px;
-	// 	right: 320px;
-	// }
 }
 
 .form {
