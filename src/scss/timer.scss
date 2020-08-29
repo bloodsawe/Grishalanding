@@ -1,0 +1,27 @@
+.timers {
+	padding: 60px 0;
+	background: #f5f5f5;
+	&__wrapper {
+		@include flex(space-between, center, row);
+	}
+	&__container {
+		@include flex(space-between, center, row);
+	}
+	&__item {
+	}
+}
+
+.timer {
+	@include size(179, 179);
+	@include flex(center, center, column);
+	background: #f5f5f5;
+	box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
+	border-radius: 50%;
+	&__percent {
+		@include font(48, 60, #6832ac);
+		text-transform: uppercase;
+	}
+	&__text {
+		@include font(14, 24, #26133e);
+	}
+}
