@@ -3,6 +3,9 @@
 	background: #f5f5f5;
 	&__wrapper {
 		@include flex(space-between, center, row);
+		@include mobile {
+			flex-direction: column;
+		}
 	}
 	&__container {
 		@include flex(space-between, center, row);
@@ -12,6 +15,9 @@
 		}
 	}
 	&__item {
+		@include mobile {
+			margin-bottom: 30px;
+		}
 	}
 	&__content {
 	}
@@ -19,6 +25,9 @@
 		@include font(24, 30, #26133e);
 		font-family: "OpenSansRegular", serif;
 		margin-bottom: 28px;
+		@include mobile {
+			font-size: 18px;
+		}
 	}
 	&__button {
 		width: 88%;
