@@ -512,6 +512,10 @@ a {
   width: 56%;
 }
 
+.timers__item {
+  position: relative;
+}
+
 .timers__text {
   font-size: 24px;
   line-height: 30px;
@@ -526,8 +530,8 @@ a {
 }
 
 .timer {
-  width: 179px;
-  height: 179px;
+  width: 180px;
+  height: 180px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -563,6 +567,68 @@ a {
   font-size: 14px;
   line-height: 24px;
   color: #26133e;
+}
+
+.timer {
+  clip: rect(0px, 180px, 180px, 90px);
+  /* Hide half of the progress bar */
+}
+
+/* Set the sizes of the elements that make up the progress bar */
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border: 10px solid #6832ac;
+  border-radius: 50%;
+  position: absolute;
+  clip: rect(0px, 180px, 180px, 90px);
+}
+
+/* Using the data attributes for the animation selectors. */
+
+/* Base settings for all animated elements */
+
+.timer[data-anim~="wrapper"] {
+  -webkit-animation-duration: 0.01s;
+          animation-duration: 0.01s;
+  /* Complete keyframes asap */
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  /* Wait half of the animation */
+  -webkit-animation-name: close-wrapper;
+          animation-name: close-wrapper;
+  /* Keyframes name */
+}
+
+.circle[data-anim~="left"] {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  /* Full animation time */
+  -webkit-animation-name: left-spin;
+          animation-name: left-spin;
+}
+
+/* Rotate the right side of the progress bar from 0 to 180 degrees */
+
+/* Rotate the left side of the progress bar from 0 to 360 degrees */
+
+@-webkit-keyframes left-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+/* Set the wrapper clip to auto, effectively removing the clip */
+
+@-webkit-keyframes close-wrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
+  }
 }
 
 @media (max-width: 1920px) {
