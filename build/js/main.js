@@ -33,14 +33,20 @@ function mobileMenu() {
 function timer() {
   var timerItems = document.querySelectorAll(".timer__percent");
   timerItems.forEach(function (item) {
-    var i = 0;
-    var interval = setInterval(function () {
-      item.textContent = "".concat(i, "%");
-      i++;
-
-      if (i > 100) {
-        clearInterval(interval);
-      }
-    }, 20);
+    window.addEventListener("scroll", function () {
+      timerCount(item);
+    });
   });
+}
+
+function timerCount(timer) {
+  var i = 0;
+  var interval = setInterval(function () {
+    timer.textContent = "".concat(i, "%");
+    i++;
+
+    if (i > 100) {
+      clearInterval(interval);
+    }
+  }, 20);
 }

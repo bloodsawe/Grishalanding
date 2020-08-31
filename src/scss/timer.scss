@@ -7,6 +7,9 @@
 	&__container {
 		@include flex(space-between, center, row);
 		width: 56%;
+		@include mobile {
+			flex-direction: column;
+		}
 	}
 	&__item {
 	}
