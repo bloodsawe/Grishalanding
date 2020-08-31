@@ -1,20 +1,31 @@
 function timer() {
-	let timerItems = document.querySelectorAll(".timer__percent");
-	timerItems.forEach((item) => {
-		window.addEventListener("scroll", () => {
-			timerCount(item);
+	const timerItems = document.querySelectorAll(".timers__item");
+	const documentHeight = document.documentElement.clientHeight;
+	const timersFlags = [];
+	timersFlags.length = timerItems.length;
+	timersFlags.fill(true);
+	window.addEventListener("scroll", (e) => {
+		timerItems.forEach((item, i) => {
+			let distanceScroll =
+				item.offsetTop - window.pageYOffset - documentHeight;
+			if (distanceScroll <= 0 && timersFlags[i]) {
+				timerCount(item, i, timersFlags);
+			}
 		});
 	});
 }
 
-function timerCount(timer) {
+// TODO: removeEventListener
+function timerCount(timer, index, timersFlags) {
+	let text = timer.querySelector(".timer__percent");
 	let i = 0;
 	let interval = setInterval(() => {
-		timer.textContent = `${i}%`;
+		text.textContent = `${i}%`;
 		i++;
 
 		if (i > 100) {
 			clearInterval(interval);
 		}
-	}, 20);
+	}, 40);
+	timersFlags[index] = false;
 }

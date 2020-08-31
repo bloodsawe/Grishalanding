@@ -31,22 +31,33 @@ function mobileMenu() {
 }
 
 function timer() {
-  var timerItems = document.querySelectorAll(".timer__percent");
-  timerItems.forEach(function (item) {
-    window.addEventListener("scroll", function () {
-      timerCount(item);
+  var timerItems = document.querySelectorAll(".timers__item");
+  var documentHeight = document.documentElement.clientHeight;
+  var timersFlags = [];
+  timersFlags.length = timerItems.length;
+  timersFlags.fill(true);
+  window.addEventListener("scroll", function (e) {
+    timerItems.forEach(function (item, i) {
+      var distanceScroll = item.offsetTop - window.pageYOffset - documentHeight;
+
+      if (distanceScroll <= 0 && timersFlags[i]) {
+        timerCount(item, i, timersFlags);
+      }
     });
   });
-}
+} // TODO: removeEventListener
 
-function timerCount(timer) {
+
+function timerCount(timer, index, timersFlags) {
+  var text = timer.querySelector(".timer__percent");
   var i = 0;
   var interval = setInterval(function () {
-    timer.textContent = "".concat(i, "%");
+    text.textContent = "".concat(i, "%");
     i++;
 
     if (i > 100) {
       clearInterval(interval);
     }
-  }, 20);
+  }, 40);
+  timersFlags[index] = false;
 }
