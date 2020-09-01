@@ -47,7 +47,7 @@
 	background: #ffffff;
 	box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
 	border-radius: 20px;
-	@include mobile_md {
+	@include mobile {
 		@include size(300, 348);
 		padding: 18px 14px 19px;
 	}
