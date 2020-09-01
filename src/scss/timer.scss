@@ -1,16 +1,26 @@
 .timers {
 	padding: 60px 0;
 	background: #f5f5f5;
+	@include tablet_md {
+		padding: 40px 0;
+	}
 	&__wrapper {
 		@include flex(space-between, center, row);
-		@include tablet {
+		@include desktop_xl {
+			flex-direction: column;
+		}
+		@include tablet_md {
 			flex-direction: column;
 		}
 	}
 	&__container {
 		@include flex(space-between, center, row);
 		width: 56%;
-		@include tablet {
+		@include desktop_xl {
+			width: 90%;
+			margin-bottom: 35px;
+		}
+		@include tablet_md {
 			flex-direction: column;
 		}
 	}
@@ -60,8 +70,9 @@
 	&__text {
 		@include font(14, 24, #26133e);
 		position: absolute;
-		top: 92px;
+		top: 104px;
 		@include tablet {
+			top: 92px;
 			font-size: 12px;
 		}
 	}

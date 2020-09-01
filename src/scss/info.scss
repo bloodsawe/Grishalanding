@@ -1,0 +1,25 @@
+.info {
+	padding: 50px 0;
+	&__wrapper {
+	}
+	&__container {
+		@include flex(space-between, center, row);
+	}
+	&__title {
+		@include font(36, 45, #26133e);
+		font-family: "OpenSansRegular", serif;
+		text-align: center;
+		margin-bottom: 49px;
+	}
+	&__img {
+		@include tablet_md {
+			display: none;
+		}
+	}
+	&__button {
+		display: inline-block;
+		width: auto;
+		padding: 12px 103px;
+		margin: 0 auto;
+	}
+}

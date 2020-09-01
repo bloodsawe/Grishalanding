@@ -1480,9 +1480,9 @@ function timerCount(timer, index, timersFlags) {
 
 function progress(item) {
   var bar = new ProgressBar.Circle(item, {
-    strokeWidth: 4,
+    strokeWidth: 3,
     easing: "linear",
-    duration: 4400,
+    duration: 4000,
     color: "#6832ac",
     trailWidth: 0.1,
     svgStyle: null
