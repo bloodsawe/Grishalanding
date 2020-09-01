@@ -14,6 +14,7 @@ const stylePath = [
 // Поочередность подключения скриптов
 const scriptPath = [
 	source_folder + "/js/**/jquery.js",
+	source_folder + "/libs/*.js",
 	source_folder + "/js/**/main.js",
 	source_folder + "/js/**/*.js",
 ];

@@ -10,6 +10,7 @@ function timer() {
 				item.offsetTop - window.pageYOffset - documentHeight;
 			if (distanceScroll <= 0 && timersFlags[i]) {
 				timerCount(item, i, timersFlags);
+				progress(item);
 			}
 		});
 	});
@@ -28,4 +29,17 @@ function timerCount(timer, index, timersFlags) {
 		}
 	}, 40);
 	timersFlags[index] = false;
+}
+
+function progress(item) {
+	var bar = new ProgressBar.Circle(item, {
+		strokeWidth: 4,
+		easing: "linear",
+		duration: 4400,
+		color: "#6832ac",
+		trailWidth: 0.1,
+		svgStyle: null,
+	});
+
+	bar.animate(1.0);
 }

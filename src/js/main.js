@@ -6,4 +6,5 @@ function main() {
 	stickyHeader();
 	mobileMenu();
 	timer();
+	progress();
 }
