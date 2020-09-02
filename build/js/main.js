@@ -1448,18 +1448,18 @@ function mobileMenu() {
 function timer() {
   var timerItems = document.querySelectorAll(".timers__item");
   var documentHeight = document.documentElement.clientHeight;
-  var timersFlags = [];
-  timersFlags.length = timerItems.length;
-  timersFlags.fill(true);
+  var timerContainer = document.querySelector(".timers__container").offsetTop;
+  var flag = true;
   window.addEventListener("scroll", function (e) {
-    timerItems.forEach(function (item, i) {
-      var distanceScroll = item.offsetTop - window.pageYOffset - documentHeight;
+    var distanceScroll = timerContainer - window.pageYOffset - documentHeight;
 
-      if (distanceScroll <= 0 && timersFlags[i]) {
-        timerCount(item, i, timersFlags);
+    if (distanceScroll <= 0 && flag) {
+      timerItems.forEach(function (item, i) {
+        timerCount(item, i);
         progress(item);
-      }
-    });
+      });
+      flag = false;
+    }
   });
 } // TODO: removeEventListener
 
@@ -1474,15 +1474,14 @@ function timerCount(timer, index, timersFlags) {
     if (i > 100) {
       clearInterval(interval);
     }
-  }, 30);
-  timersFlags[index] = false;
+  }, 20);
 }
 
 function progress(item) {
   var bar = new ProgressBar.Circle(item, {
     strokeWidth: 3,
     easing: "linear",
-    duration: 3000,
+    duration: 2000,
     color: "#6832ac",
     trailWidth: 0.1,
     svgStyle: null

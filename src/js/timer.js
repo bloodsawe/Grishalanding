@@ -1,18 +1,19 @@
 function timer() {
 	const timerItems = document.querySelectorAll(".timers__item");
 	const documentHeight = document.documentElement.clientHeight;
-	const timersFlags = [];
-	timersFlags.length = timerItems.length;
-	timersFlags.fill(true);
+	const timerContainer = document.querySelector(".timers__container")
+		.offsetTop;
+	let flag = true;
 	window.addEventListener("scroll", (e) => {
-		timerItems.forEach((item, i) => {
-			let distanceScroll =
-				item.offsetTop - window.pageYOffset - documentHeight;
-			if (distanceScroll <= 0 && timersFlags[i]) {
-				timerCount(item, i, timersFlags);
+		let distanceScroll =
+			timerContainer - window.pageYOffset - documentHeight;
+		if (distanceScroll <= 0 && flag) {
+			timerItems.forEach((item, i) => {
+				timerCount(item, i);
 				progress(item);
-			}
-		});
+			});
+			flag = false;
+		}
 	});
 }
 
@@ -27,15 +28,14 @@ function timerCount(timer, index, timersFlags) {
 		if (i > 100) {
 			clearInterval(interval);
 		}
-	}, 30);
-	timersFlags[index] = false;
+	}, 20);
 }
 
 function progress(item) {
 	var bar = new ProgressBar.Circle(item, {
 		strokeWidth: 3,
 		easing: "linear",
-		duration: 3000,
+		duration: 2000,
 		color: "#6832ac",
 		trailWidth: 0.1,
 		svgStyle: null,
