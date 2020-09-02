@@ -28,7 +28,7 @@ function timerCount(timer, index, timersFlags) {
 		if (i > 100) {
 			clearInterval(interval);
 		}
-	}, 20);
+	}, 10);
 }
 
 function progress(item) {
