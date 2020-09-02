@@ -1474,7 +1474,7 @@ function timerCount(timer, index, timersFlags) {
     if (i > 100) {
       clearInterval(interval);
     }
-  }, 40);
+  }, 30);
   timersFlags[index] = false;
 }
 
@@ -1482,7 +1482,7 @@ function progress(item) {
   var bar = new ProgressBar.Circle(item, {
     strokeWidth: 3,
     easing: "linear",
-    duration: 4000,
+    duration: 3000,
     color: "#6832ac",
     trailWidth: 0.1,
     svgStyle: null
