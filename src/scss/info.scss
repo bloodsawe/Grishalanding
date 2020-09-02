@@ -5,21 +5,46 @@
 	&__container {
 		@include flex(space-between, center, row);
 	}
+	&__list-item {
+		display: flex;
+	}
 	&__title {
 		@include font(36, 45, #26133e);
 		font-family: "OpenSansRegular", serif;
 		text-align: center;
 		margin-bottom: 49px;
 	}
+	&__text {
+		font-size: 18px;
+		line-height: 31px;
+		color: #26133e;
+		margin-bottom: 31px;
+		@include mobile {
+			font-size: 14px;
+			line-height: 24px;
+			margin-bottom: 20px;
+		}
+	}
 	&__img {
+		@include desktop_xxl {
+			img {
+				width: calc(100vw * 0.35);
+			}
+		}
 		@include tablet_md {
 			display: none;
 		}
+	}
+	&__number {
+		margin-right: 15px;
 	}
 	&__button {
 		display: inline-block;
 		width: auto;
 		padding: 12px 103px;
 		margin: 0 auto;
+		@include tablet_md {
+			padding: 12px 72px;
+		}
 	}
 }
