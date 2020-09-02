@@ -35,7 +35,7 @@ function progress(item) {
 	var bar = new ProgressBar.Circle(item, {
 		strokeWidth: 1,
 		easing: "linear",
-		duration: 2000,
+		duration: 1000,
 		color: "#6832ac",
 		trailWidth: 0.1,
 		svgStyle: null,
