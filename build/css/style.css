@@ -742,6 +742,19 @@ a {
   text-align: center;
 }
 
+.online .tns-nav {
+  background: #af94d1;
+  border-radius: 10px;
+}
+
+.online .tns-nav button {
+  background: #6832ac;
+  opacity: 1;
+  border-radius: 10px;
+  width: 40px;
+  height: 4px;
+}
+
 .timers {
   padding: 60px 0;
   background: #f5f5f5;

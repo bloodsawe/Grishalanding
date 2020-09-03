@@ -3039,8 +3039,11 @@ function sliderInit() {
       items: 1.2,
       slideBy: 1,
       loop: false,
-      autoplay: false,
+      autoplayButton: true,
+      autoplayButtonOutput: false,
       startIndex: 0,
+      controls: false,
+      navAsThumbnails: true,
       nav: true
     });
   }
