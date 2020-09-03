@@ -37,6 +37,12 @@ $desktop_xxl: 1920px;
 	}
 }
 
+@mixin mobile-min {
+	@media (min-width:#{$mobile}) {
+		@content;
+	}
+}
+
 @mixin tablet_sm {
 	@media (max-width:#{$tablet_sm}) {
 		@content;
