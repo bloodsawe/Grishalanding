@@ -7,5 +7,7 @@ function main() {
 	mobileMenu();
 	timer();
 	sliderInit();
+	let sliders = document.querySelectorAll(".online__block");
+	maxSliderHeight(sliders);
 	progress();
 }

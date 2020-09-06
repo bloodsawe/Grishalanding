@@ -3007,6 +3007,8 @@ function main() {
   mobileMenu();
   timer();
   sliderInit();
+  var sliders = document.querySelectorAll(".online__block");
+  maxSliderHeight(sliders);
   progress();
 }
 
@@ -3027,6 +3029,19 @@ function mobileMenu() {
     nav.classList.remove("nav__open");
     header.style.background = "";
     header.style.opacity = 0.9;
+  });
+}
+
+function maxSliderHeight(sliders) {
+  var max = 0;
+  sliders.forEach(function (e) {
+    if (e.clientHeight > max) {
+      max = e.clientHeight;
+    }
+  });
+  console.log(max);
+  sliders.forEach(function (e) {
+    e.style.height = "".concat(max, "px");
   });
 }
 
