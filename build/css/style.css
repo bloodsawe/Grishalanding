@@ -743,16 +743,36 @@ a {
 }
 
 .online .tns-nav {
+  position: relative;
+  width: 120px;
+  height: 2px;
+  margin: 0 auto;
   background: #af94d1;
   border-radius: 10px;
 }
 
 .online .tns-nav button {
+  display: none;
+}
+
+.online .tns-nav button.tns-nav-active {
+  display: block;
+  position: absolute;
+  top: -1px;
   background: #6832ac;
   opacity: 1;
   border-radius: 10px;
   width: 40px;
   height: 4px;
+  border: none;
+}
+
+.online .tns-nav button.tns-nav-active[data-nav="1"] {
+  left: 40px;
+}
+
+.online .tns-nav button.tns-nav-active[data-nav="2"] {
+  right: 0;
 }
 
 .timers {

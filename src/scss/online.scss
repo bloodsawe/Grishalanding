@@ -54,14 +54,31 @@
 		}
 	}
 	.tns-nav {
+		position: relative;
+		width: 120px;
+		height: 2px;
+		margin: 0 auto;
 		background: #af94d1;
 		border-radius: 10px;
 		button {
+			display: none;
+		}
+		button.tns-nav-active {
+			display: block;
+			position: absolute;
+			top: -1px;
 			background: #6832ac;
 			opacity: 1;
 			border-radius: 10px;
 			width: 40px;
 			height: 4px;
+			border: none;
+			&[data-nav="1"] {
+				left: 40px;
+			}
+			&[data-nav="2"] {
+				right: 0;
+			}
 		}
 	}
 }

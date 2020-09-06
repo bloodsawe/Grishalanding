@@ -12,6 +12,7 @@ function sliderInit() {
 			controls: false,
 			navAsThumbnails: true,
 			nav: true,
+			navPosition: "bottom",
 		});
 	}
 }

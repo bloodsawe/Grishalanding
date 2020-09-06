@@ -3044,7 +3044,8 @@ function sliderInit() {
       startIndex: 0,
       controls: false,
       navAsThumbnails: true,
-      nav: true
+      nav: true,
+      navPosition: "bottom"
     });
   }
 }
