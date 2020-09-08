@@ -3008,8 +3008,7 @@ function main() {
   timer();
   sliderInit();
   var sliders = document.querySelectorAll(".online__block");
-  maxSliderHeight(sliders);
-  progress();
+  maxSliderHeight(sliders); // progress();
 }
 
 function stickyHeader() {
