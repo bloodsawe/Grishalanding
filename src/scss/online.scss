@@ -3,6 +3,9 @@
 	padding-top: 50px;
 	padding-bottom: 41px;
 	&__wrapper {
+		@include mobile_sm {
+			width: 100% !important;
+		}
 	}
 	&__title {
 		@include font(36, 45, #26133e);

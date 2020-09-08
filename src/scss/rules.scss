@@ -2,6 +2,9 @@
 	padding-top: 50px;
 	padding-bottom: 41px;
 	&__wrapper {
+		@include mobile_sm {
+			width: 100% !important;
+		}
 	}
 	&__title {
 		@include font(36, 45, #26133e);
@@ -24,8 +27,8 @@
 	&__block {
 		padding: 20px 10px 11px;
 		@include mobile {
-			// background: #ffffff;
-			// box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
+			background: #ffffff;
+			box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
 			border-radius: 20px;
 		}
 	}
@@ -36,6 +39,9 @@
 		// box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
 		border-radius: 50%;
 		margin-bottom: 20px;
+		@include mobile_sm {
+			margin: 0 auto 20px;
+		}
 		img {
 			position: absolute;
 			@include position-center();
@@ -48,6 +54,10 @@
 		@include font(20, 25, #26133e);
 		font-family: "OpenSansBold", serif;
 		margin-bottom: 14px;
+		@include mobile {
+			font-size: 16px;
+			line-height: 28px;
+		}
 	}
 	&__text {
 		@include font(18, 31, #26133e);

@@ -692,10 +692,11 @@ a {
 }
 
 .info__button {
-  display: inline-block;
+  display: block;
   width: auto;
   padding: 12px 103px;
   margin: 0 auto;
+  max-width: 335px;
 }
 
 .online {
@@ -870,6 +871,7 @@ a {
 
 .teachers {
   padding: 50px 0;
+  background: #f5f5f5;
 }
 
 .teachers__container {
@@ -1392,12 +1394,20 @@ a {
   }
 
   .rules__block {
+    background: #ffffff;
+    -webkit-box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
+            box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
     border-radius: 20px;
   }
 
   .rules__img {
     width: 150px;
     height: 150px;
+  }
+
+  .rules__heading {
+    font-size: 16px;
+    line-height: 28px;
   }
 
   .rules__text {
@@ -1433,5 +1443,17 @@ a {
 @media (max-width: 360px) {
   .wrapper {
     width: 83%;
+  }
+
+  .online__wrapper {
+    width: 100% !important;
+  }
+
+  .rules__wrapper {
+    width: 100% !important;
+  }
+
+  .rules__img {
+    margin: 0 auto 20px;
   }
 }

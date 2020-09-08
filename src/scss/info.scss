@@ -44,10 +44,11 @@
 		}
 	}
 	&__button {
-		display: inline-block;
+		display: block;
 		width: auto;
 		padding: 12px 103px;
 		margin: 0 auto;
+		max-width: 335px;
 		@include tablet_md {
 			padding: 12px 72px;
 		}
