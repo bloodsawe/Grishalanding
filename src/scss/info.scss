@@ -36,7 +36,12 @@
 		}
 	}
 	&__number {
+		width: 45px;
 		margin-right: 15px;
+		img {
+			width: 45px;
+			height: 42px;
+		}
 	}
 	&__button {
 		display: inline-block;

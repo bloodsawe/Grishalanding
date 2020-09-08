@@ -682,7 +682,13 @@ a {
 }
 
 .info__number {
+  width: 45px;
   margin-right: 15px;
+}
+
+.info__number img {
+  width: 45px;
+  height: 42px;
 }
 
 .info__button {
