@@ -19,12 +19,14 @@
 	&__nav {
 	}
 	&__link {
+		position: relative;
 		display: block;
 		margin-bottom: 14px;
 		color: #ffffff;
 		cursor: pointer;
-		&:before {
-			content: "";
+		img {
+			position: absolute;
+			left: 0;
 		}
 	}
 }
