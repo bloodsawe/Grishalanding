@@ -44,6 +44,11 @@
 			@include size(150, 150);
 		}
 	}
+	&__heading {
+		@include font(20, 25, #26133e);
+		font-family: "OpenSansBold", serif;
+		margin-bottom: 14px;
+	}
 	&__text {
 		@include font(18, 31, #26133e);
 		@include mobile {
