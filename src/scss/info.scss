@@ -9,9 +9,6 @@
 		display: flex;
 	}
 	&__title {
-		@include font(36, 45, #26133e);
-		font-family: "OpenSansRegular", serif;
-		text-align: center;
 		margin-bottom: 49px;
 	}
 	&__text {

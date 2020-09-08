@@ -9,12 +9,6 @@
 	&__list-item {
 		display: flex;
 	}
-	&__title {
-		@include font(36, 45, #26133e);
-		font-family: "OpenSansRegular", serif;
-		text-align: center;
-		margin-bottom: 49px;
-	}
 	&__text {
 		font-size: 18px;
 		line-height: 31px;

@@ -7,11 +7,6 @@
 			width: 100% !important;
 		}
 	}
-	&__title {
-		@include font(36, 45, #26133e);
-		font-family: "OpenSansRegular", serif;
-		text-align: center;
-	}
 	&__container {
 	}
 	&__slider {
