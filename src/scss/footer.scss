@@ -1,0 +1,30 @@
+.footer {
+	background: #311456;
+	width: 100%;
+	height: 185px;
+	&__wrapper {
+		@include flex(flex-start, center, row);
+		@include mobile {
+			justify-content: center;
+			padding-top: 11px;
+		}
+	}
+	&__logo {
+		display: block;
+		margin-right: 251px;
+		img {
+			width: 100%;
+		}
+	}
+	&__nav {
+	}
+	&__link {
+		display: block;
+		margin-bottom: 14px;
+		color: #ffffff;
+		cursor: pointer;
+		&:before {
+			content: "";
+		}
+	}
+}
