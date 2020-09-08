@@ -3008,7 +3008,8 @@ function main() {
   timer();
   sliderInit();
   var sliders = document.querySelectorAll(".online__block");
-  maxSliderHeight(sliders); // progress();
+  maxSliderHeight(sliders);
+  questions(); // progress();
 }
 
 function stickyHeader() {
@@ -3041,6 +3042,16 @@ function maxSliderHeight(sliders) {
   console.log(max);
   sliders.forEach(function (e) {
     e.style.height = "".concat(max, "px");
+  });
+}
+
+function questions() {
+  var container = document.querySelector(".questions__container");
+  container.addEventListener("click", function (_ref) {
+    var target = _ref.target;
+    var item = target.closest(".questions__item");
+    item.querySelector(".questions__text").classList.toggle("open");
+    item.querySelector(".questions__plus").classList.toggle("open");
   });
 }
 
