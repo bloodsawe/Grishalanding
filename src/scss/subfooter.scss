@@ -1,0 +1,52 @@
+.subfooter {
+	background: #6832ac;
+	padding: 86px 0 80px 0;
+	@include tablet_md {
+		padding: 40px 0 80px 0;
+	}
+	&__wrapper {
+		@include flex(space-between, center, row);
+		@include tablet_md {
+			@include flex(space-between, center, column);
+		}
+	}
+	&__content {
+	}
+	&__title {
+		@include font(36, 45, #fff);
+		@include tablet_md {
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+	&__text {
+		@include font(18, 31, #fff);
+		@include tablet_md {
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+	&__form {
+		background: #ffffff;
+		box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
+		border-radius: 20px;
+		padding: 25px 48px 40px 38px;
+		@include tablet_md {
+			padding: 28px 13px 27px 13px;
+			margin-bottom: 10px;
+		}
+	}
+	&__label {
+		@include font(16, 28, #26133e);
+		@include tablet_md {
+			@include font(14, 24, #26133e);
+			margin-bottom: 10px;
+		}
+	}
+	&__container {
+		@include flex(space-between, center, row);
+		@include tablet_md {
+			@include flex(space-between, stretch, column);
+		}
+	}
+}
