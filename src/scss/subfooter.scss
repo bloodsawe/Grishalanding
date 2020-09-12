@@ -6,7 +6,7 @@
 	}
 	&__wrapper {
 		@include flex(space-between, center, row);
-		@include tablet_md {
+		@include desktop_xm {
 			@include flex(space-between, center, column);
 		}
 	}
@@ -45,8 +45,42 @@
 	}
 	&__container {
 		@include flex(space-between, center, row);
+		margin-bottom: 30px;
+		width: 771px;
 		@include tablet_md {
 			@include flex(space-between, stretch, column);
+			margin-bottom: 20px;
+			width: 100%;
 		}
+	}
+	&__input-container {
+		@include flex(space-between, stretch, column);
+		width: 49%;
+		height: 117px;
+		@include tablet_md {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__input {
+	}
+	&__textarea {
+		width: 49%;
+		border-radius: 10px;
+		border: 1px solid #26133e;
+		padding: 11px 0 0 16px;
+		height: 117px;
+		resize: none;
+		@include tablet_md {
+			width: 100%;
+			height: 273px;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	&__button {
+		max-width: 335px;
+		margin: 0 auto;
 	}
 }
