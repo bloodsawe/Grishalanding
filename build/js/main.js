@@ -3099,6 +3099,20 @@ function sliderInit() {
       navPosition: "bottom"
     });
   }
+
+  var reviewsSlider = tns({
+    container: "#reviewsSlider",
+    items: 3,
+    slideBy: 1,
+    loop: true,
+    autoplayButton: true,
+    autoplayButtonOutput: false,
+    startIndex: 0,
+    controls: false,
+    navAsThumbnails: true,
+    nav: true,
+    navPosition: "bottom"
+  });
 }
 
 function timer() {
