@@ -1896,6 +1896,14 @@ a {
     margin-bottom: 20px;
   }
 
+  .online__title {
+    margin-bottom: 20px;
+  }
+
+  .online__container {
+    padding-left: 16px;
+  }
+
   .online__item {
     padding: 14px;
   }
@@ -1913,7 +1921,7 @@ a {
   }
 
   .online__text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
   }
 

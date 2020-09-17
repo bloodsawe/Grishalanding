@@ -6,7 +6,15 @@
 			width: 100% !important;
 		}
 	}
+	&__title {
+		@include mobile {
+			margin-bottom: 20px;
+		}
+	}
 	&__container {
+		@include mobile {
+			padding-left: 16px;
+		}
 	}
 	&__slider {
 		@include mobile-min {
@@ -50,7 +58,7 @@
 		@include font(18, 31, #26133e);
 		text-align: center;
 		@include mobile {
-			font-size: 14px;
+			font-size: 16px;
 			line-height: 24px;
 		}
 	}
