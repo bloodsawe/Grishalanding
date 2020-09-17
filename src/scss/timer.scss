@@ -20,7 +20,7 @@
 			width: 90%;
 			margin-bottom: 35px;
 		}
-		@include tablet_md {
+		@include tablet_sm {
 			flex-direction: column;
 		}
 	}

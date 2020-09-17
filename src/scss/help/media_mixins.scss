@@ -61,6 +61,12 @@ $desktop_xxl: 1920px;
 	}
 }
 
+@mixin tablet_md-min {
+	@media (min-width:#{$tablet_md}) {
+		@content;
+	}
+}
+
 @mixin tablet {
 	@media (max-width:#{$tablet}) {
 		@content;

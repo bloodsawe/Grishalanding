@@ -10,6 +10,9 @@
 	}
 	&__slider {
 		@include mobile-min {
+			@include flex(space-between, center, column);
+		}
+		@include tablet_md-min {
 			@include flex(space-between, center, row);
 		}
 	}
