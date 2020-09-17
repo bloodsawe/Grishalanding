@@ -3047,6 +3047,7 @@ function maxSliderHeight(sliders) {
 
 function questions() {
   var container = document.querySelector(".questions__container");
+  console.log("fas");
   container.addEventListener("click", function (_ref) {
     var target = _ref.target;
     var item = target.closest(".questions__item");
