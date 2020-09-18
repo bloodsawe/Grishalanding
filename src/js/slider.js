@@ -16,6 +16,7 @@ function sliderInit() {
 		});
 		var rulesSlider = tns({
 			container: "#rulesSlider",
+			center: true,
 			items: 1.2,
 			slideBy: 1,
 			loop: false,

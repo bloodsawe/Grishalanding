@@ -3007,8 +3007,10 @@ function main() {
   mobileMenu();
   timer();
   sliderInit();
-  var sliders = document.querySelectorAll(".online__block");
-  maxSliderHeight(sliders);
+  var slidersOnline = document.querySelectorAll(".online__block");
+  var slidersRules = document.querySelectorAll(".rules__block");
+  maxSliderHeight(slidersOnline);
+  maxSliderHeight(slidersRules);
   questions(); // progress();
 }
 
@@ -3075,6 +3077,7 @@ function sliderInit() {
     });
     var rulesSlider = tns({
       container: "#rulesSlider",
+      center: true,
       items: 1.2,
       slideBy: 1,
       loop: false,

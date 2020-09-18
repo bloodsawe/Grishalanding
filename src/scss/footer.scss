@@ -2,9 +2,14 @@
 	background: #311456;
 	width: 100%;
 	height: 185px;
+	padding-top: 21px;
+	@include mobile {
+		height: 326px;
+	}
 	&__wrapper {
 		@include flex(flex-start, center, row);
 		@include mobile {
+			flex-direction: column;
 			justify-content: center;
 			padding-top: 11px;
 		}
@@ -12,6 +17,10 @@
 	&__logo {
 		display: block;
 		margin-right: 251px;
+		@include mobile {
+			@include size(188, 162);
+			margin: 0 auto;
+		}
 		img {
 			width: 100%;
 		}
@@ -19,14 +28,18 @@
 	&__nav {
 	}
 	&__link {
+		font-family: "ProximaRegular", serif;
+		font-size: 18px;
 		position: relative;
 		display: block;
 		margin-bottom: 14px;
 		color: #ffffff;
 		cursor: pointer;
+		line-height: 31px;
 		img {
 			position: absolute;
-			left: 0;
+			top: 7px;
+			left: -42px;
 		}
 	}
 }

@@ -7,8 +7,10 @@ function main() {
 	mobileMenu();
 	timer();
 	sliderInit();
-	let sliders = document.querySelectorAll(".online__block");
-	maxSliderHeight(sliders);
+	let slidersOnline = document.querySelectorAll(".online__block");
+	let slidersRules = document.querySelectorAll(".rules__block");
+	maxSliderHeight(slidersOnline);
+	maxSliderHeight(slidersRules);
 	questions();
 	// progress();
 }
