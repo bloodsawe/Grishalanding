@@ -3106,8 +3106,9 @@ function sliderInit() {
 
   var reviewsSlider = tns({
     container: "#reviewsSlider",
-    items: 3,
+    items: 1,
     slideBy: 1,
+    gutter: 70,
     loop: true,
     autoplayButton: true,
     autoplayButtonOutput: false,
@@ -3115,7 +3116,11 @@ function sliderInit() {
     controls: false,
     navAsThumbnails: true,
     nav: true,
-    navPosition: "bottom"
+    responsive: {
+      768: {
+        items: 3
+      }
+    }
   });
 }
 
