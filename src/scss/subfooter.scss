@@ -1,8 +1,9 @@
 .subfooter {
-	background: #6832ac;
+	background: url(../img/footer-bg-desktop.png);
 	padding: 86px 0 80px 0;
-	@include tablet_md {
+	@include mobile {
 		padding: 40px 0 80px 0;
+		background: url(../img/footer-bg-mobile.png);
 	}
 	&__wrapper {
 		@include flex(space-between, center, row);
@@ -11,9 +12,13 @@
 		}
 	}
 	&__content {
+		@include desktop_xm {
+			margin-bottom: 40px;
+		}
 	}
 	&__title {
 		@include font(36, 45, #fff);
+		margin-bottom: 15px;
 		@include tablet_md {
 			font-size: 24px;
 			line-height: 30px;
@@ -27,12 +32,27 @@
 		}
 	}
 	&__form {
+		max-width: 771px;
+		width: 771px;
 		background: #ffffff;
 		box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
 		border-radius: 20px;
 		padding: 25px 48px 40px 38px;
+		@include tablet {
+			width: 673px;
+		}
 		@include tablet_md {
+			width: 411px;
 			padding: 28px 13px 27px 13px;
+			margin-bottom: 10px;
+		}
+		@include mobile {
+			width: 300px;
+		}
+	}
+	&__input {
+		height: 51px;
+		@include tablet_md {
 			margin-bottom: 10px;
 		}
 	}
@@ -46,7 +66,6 @@
 	&__container {
 		@include flex(space-between, center, row);
 		margin-bottom: 30px;
-		width: 771px;
 		@include tablet_md {
 			@include flex(space-between, stretch, column);
 			margin-bottom: 20px;
@@ -75,11 +94,15 @@
 			width: 100%;
 			height: 273px;
 		}
+		@include mobile {
+			height: 153px;
+		}
 		&:focus {
 			outline: none;
 		}
 	}
 	&__button {
+		height: 51px;
 		max-width: 335px;
 		margin: 0 auto;
 	}
