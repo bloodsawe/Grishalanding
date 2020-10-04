@@ -3004,11 +3004,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function main() {
   stickyHeader();
-  mobileMenu();
-  timer();
+  mobileMenu(); // timer();
+
   sliderInit();
-  var slidersOnline = document.querySelectorAll(".online__block");
   var slidersRules = document.querySelectorAll(".rules__block");
+  var slidersOnline = document.querySelectorAll(".online__block");
   maxSliderHeight(slidersOnline);
   maxSliderHeight(slidersRules);
   questions(); // progress();
@@ -3089,8 +3089,21 @@ function sliderInit() {
       nav: true,
       navPosition: "bottom"
     });
-    var rulesSlider = tns({
+    var subjectsSlider = tns({
       container: "#subjectsSlider",
+      items: 1.2,
+      slideBy: 1,
+      loop: false,
+      autoplayButton: true,
+      autoplayButtonOutput: false,
+      startIndex: 0,
+      controls: false,
+      navAsThumbnails: true,
+      nav: true,
+      navPosition: "bottom"
+    });
+    var costsSlider = tns({
+      container: "#costsSlider",
       items: 1.2,
       slideBy: 1,
       loop: false,

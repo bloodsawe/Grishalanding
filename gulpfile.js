@@ -200,7 +200,7 @@ function images() {
 		src(path.src.img)
 			.pipe(
 				webp({
-					quality: 70,
+					quality: 100,
 				})
 			)
 			.pipe(dest(path.build.img))
@@ -209,11 +209,11 @@ function images() {
 				cache(
 					imagemin([
 						imagemin.gifsicle({ interlaced: true }),
-						jpegrecompress({
-							progressive: true,
-							max: 90,
-							min: 80,
-						}),
+						// jpegrecompress({
+						// 	progressive: true,
+						// 	max: 90,
+						// 	min: 80,
+						// }),
 						// pngquant(),
 						imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
 					])

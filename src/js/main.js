@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function main() {
 	stickyHeader();
 	mobileMenu();
-	timer();
+	// timer();
 	sliderInit();
-	let slidersOnline = document.querySelectorAll(".online__block");
 	let slidersRules = document.querySelectorAll(".rules__block");
+	let slidersOnline = document.querySelectorAll(".online__block");
 	maxSliderHeight(slidersOnline);
 	maxSliderHeight(slidersRules);
 	questions();

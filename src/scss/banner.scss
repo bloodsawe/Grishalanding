@@ -3,6 +3,10 @@
 	padding: 314px 0 325px;
 	background-color: #6832ac;
 	background: url(../img/desktop-bg-2.png) no-repeat center/cover;
+
+	@include tablet {
+		padding: 178px 0 177px;
+	}
 	@include mobile {
 		background: url(../img/mobile-bg.png) no-repeat center/cover;
 		padding: 178px 0 53px;
@@ -12,16 +16,21 @@
 		@include tablet {
 			flex-direction: column;
 		}
+		@include mobile {
+			width: 83%;
+		}
 	}
 	&__content {
-		@include mobile {
-			margin-bottom: 26px;
+		@include tablet {
+			margin-bottom: 48px;
 		}
 	}
 	&__title {
 		@include adaptive-font(60, 24, 75, #fff);
 		font-family: "OpenSansRegular", serif;
+		font-weight: 700;
 		text-transform: capitalize;
+		margin-bottom: 45px;
 		span {
 			font-family: "OpenSansBold", serif;
 			color: #d5fc01;
@@ -30,10 +39,23 @@
 		@include mobile {
 			text-transform: initial;
 			line-height: 30px;
+			margin-bottom: 19px;
 		}
 	}
 	&__text {
 		@include adaptive-font(22, 14, 38, #fff);
+		position: relative;
+		font-weight: 700;
+		&:before {
+			content: "";
+			position: absolute;
+			@include size(10, 10);
+			top: 50%;
+			transform: translateY(-50%);
+			left: -20px;
+			border-radius: 50%;
+			background: #40f9ad;
+		}
 		@include mobile {
 			line-height: 24px;
 			width: 96%;
@@ -42,11 +64,23 @@
 }
 
 .form {
+	position: relative;
 	@include size(411, 411);
 	padding: 18px 38px 27px;
 	background: #ffffff;
 	box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
 	border-radius: 20px;
+	@include mobile_sm {
+		width: 280px;
+	}
+	img {
+		position: absolute;
+		right: 58px;
+		bottom: -84px;
+		@include mobile {
+			display: none;
+		}
+	}
 	@include mobile {
 		@include size(300, 348);
 		padding: 18px 14px 19px;
@@ -60,11 +94,11 @@
 		// margin: 0 auto;
 	}
 	&__title {
-		@include font(16, 24, #26133e);
+		@include font(18, 24, #26133e);
 		font-family: ProximaBold, serif;
 		font-weight: bold;
 		text-align: center;
-		@include mobile_md {
+		@include mobile {
 			font-size: 14px;
 			br {
 				display: none;
@@ -78,6 +112,7 @@
 		font-size: 16px;
 		color: #26133e;
 		line-height: 28px;
+		font-weight: 700;
 		span {
 			text-decoration: underline;
 		}
@@ -89,6 +124,7 @@
 		}
 		&_center {
 			margin: 0 auto;
+			font-weight: normal;
 		}
 	}
 }
