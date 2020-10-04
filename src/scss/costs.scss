@@ -95,8 +95,12 @@
 		margin-bottom: 18px;
 	}
 	&__text {
+		position: relative;
 		color: #26133e;
 		margin-bottom: 8px;
+		img {
+			position: absolute;
+		}
 	}
 	&__crossed-cost {
 		font-family: "OpenSansBold", serif;
