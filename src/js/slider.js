@@ -43,7 +43,7 @@ function sliderInit() {
 		});
 		var costsSlider = tns({
 			container: "#costsSlider",
-			items: 1.2,
+			items: 1.1,
 			slideBy: 1,
 			loop: false,
 			autoplayButton: true,

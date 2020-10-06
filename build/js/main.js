@@ -3009,8 +3009,10 @@ function main() {
   sliderInit();
   var slidersRules = document.querySelectorAll(".rules__block");
   var slidersOnline = document.querySelectorAll(".online__block");
+  var slidersCosts = document.querySelectorAll(".costs__block");
   maxSliderHeight(slidersOnline);
   maxSliderHeight(slidersRules);
+  maxSliderHeight(slidersCosts);
   questions(); // progress();
 }
 
@@ -3104,7 +3106,7 @@ function sliderInit() {
     });
     var costsSlider = tns({
       container: "#costsSlider",
-      items: 1.2,
+      items: 1.1,
       slideBy: 1,
       loop: false,
       autoplayButton: true,

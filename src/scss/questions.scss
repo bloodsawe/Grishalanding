@@ -30,7 +30,7 @@
 	}
 	&__heading {
 		@include font(24, 30, #26133e);
-		font-family: "OpenSansRegular", serif;
+		font-family: "ProximaBold", serif;
 		margin-bottom: 12px;
 		@include mobile_sm {
 			font-size: 16px;
