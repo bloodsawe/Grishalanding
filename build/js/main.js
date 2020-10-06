@@ -3043,7 +3043,7 @@ function maxSliderHeight(sliders) {
   });
   console.log(max);
   sliders.forEach(function (e) {
-    e.style.height = "".concat(max, "px");
+    e.style.height = "".concat(max + 15, "px");
   });
 }
 

@@ -22,7 +22,10 @@
 	&__item {
 		padding: 28px;
 		@include mobile {
-			padding: 14px;
+			padding: 14px 14px 22px;
+			&:nth-child(1) {
+				margin-left: 30px;
+			}
 		}
 	}
 	&__block {
@@ -36,10 +39,8 @@
 	&__img {
 		@include size(42, 42);
 		position: relative;
-		// background: #f5f5f5;
-		// box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
 		border-radius: 50%;
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 		@include mobile {
 			margin: 0 auto 20px;
 		}
@@ -63,8 +64,11 @@
 	}
 	&__text {
 		@include font(18, 31, #26133e);
+		span {
+			font-family: "ProximaBold", serif;
+		}
 		@include mobile {
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 24px;
 			text-align: center;
 		}

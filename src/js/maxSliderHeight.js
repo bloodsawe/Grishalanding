@@ -7,6 +7,6 @@ function maxSliderHeight(sliders) {
 	});
 	console.log(max);
 	sliders.forEach((e) => {
-		e.style.height = `${max}px`;
+		e.style.height = `${max + 15}px`;
 	});
 }
