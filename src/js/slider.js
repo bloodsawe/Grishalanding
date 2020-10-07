@@ -58,19 +58,24 @@ function sliderInit() {
 
 	var reviewsSlider = tns({
 		container: "#reviewsSlider",
-		items: 1,
+		items: 1.2,
 		slideBy: 1,
-		gutter: 70,
 		loop: true,
 		autoplayButton: true,
 		autoplayButtonOutput: false,
+		gutter: 0,
 		startIndex: 0,
 		controls: false,
 		navAsThumbnails: true,
 		nav: true,
+		controlsContainer: ".reviews__controls",
+		navPosition: "bottom",
 		responsive: {
 			768: {
 				items: 3,
+				controls: true,
+				nav: false,
+				gutter: 70,
 			},
 		},
 	});

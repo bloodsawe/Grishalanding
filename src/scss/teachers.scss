@@ -5,6 +5,9 @@
 	}
 	&__container {
 		@include flex(space-between, center, row);
+		@include tablet_md {
+			flex-direction: column-reverse;
+		}
 	}
 	&__list-item {
 		display: flex;
@@ -15,6 +18,7 @@
 		color: #26133e;
 		margin-bottom: 31px;
 		@include mobile {
+			padding: 0 30px;
 			font-size: 14px;
 			line-height: 24px;
 			margin-bottom: 20px;
@@ -26,8 +30,11 @@
 				width: calc(100vw * 0.35);
 			}
 		}
+
 		@include tablet_md {
-			display: none;
+			img {
+				width: 100%;
+			}
 		}
 	}
 	&__number {

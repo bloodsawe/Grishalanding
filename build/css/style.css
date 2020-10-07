@@ -988,6 +988,7 @@ a {
 
 .questions {
   background: #f5f5f5;
+  padding: 50px 0 19px;
 }
 
 .questions__title {
@@ -1081,7 +1082,7 @@ a {
 .reviews__controls.controls {
   position: absolute;
   top: auto;
-  width: 5%;
+  width: 108px;
   bottom: -57px;
 }
 
@@ -1113,7 +1114,7 @@ a {
 }
 
 .reviews__name {
-  font-family: "ProximaRegular", serif;
+  font-family: "ProximaBold", serif;
   font-size: 24px;
   line-height: 30px;
   margin-bottom: 7px;
@@ -1132,6 +1133,39 @@ a {
   font-size: 16px;
   line-height: 28px;
   color: #333333;
+}
+
+.reviews .tns-nav {
+  position: relative;
+  width: 120px;
+  height: 2px;
+  margin: 0 auto;
+  background: #af94d1;
+  border-radius: 10px;
+}
+
+.reviews .tns-nav button {
+  display: none;
+}
+
+.reviews .tns-nav button.tns-nav-active {
+  display: block;
+  position: absolute;
+  top: -1px;
+  background: #6832ac;
+  opacity: 1;
+  border-radius: 10px;
+  width: 40px;
+  height: 4px;
+  border: none;
+}
+
+.reviews .tns-nav button.tns-nav-active[data-nav="1"] {
+  left: 40px;
+}
+
+.reviews .tns-nav button.tns-nav-active[data-nav="2"] {
+  right: 0;
 }
 
 .controls {
@@ -2023,6 +2057,14 @@ a {
     width: 100%;
   }
 
+  .reviews__content {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 27px;
+  }
+
   .subfooter__title {
     font-size: 24px;
     line-height: 30px;
@@ -2082,8 +2124,16 @@ a {
     height: 273px;
   }
 
-  .teachers__img {
-    display: none;
+  .teachers__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .teachers__img img {
+    width: 100%;
   }
 
   .teachers__button {
@@ -2393,14 +2443,44 @@ a {
     line-height: 24px;
   }
 
+  .reviews {
+    padding: 40px 0 50px 0;
+  }
+
+  .reviews__wrapper {
+    width: 100% !important;
+  }
+
+  .reviews__controls {
+    display: none;
+  }
+
+  .reviews__item {
+    padding: 20px 10px 34px;
+  }
+
+  .reviews__block {
+    padding: 16px 10px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
+            box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
+    border-radius: 20px;
+  }
+
   .reviews__img {
     width: 53px;
     height: 53px;
     margin-right: 18px;
   }
 
+  .reviews__img img {
+    width: 100%;
+  }
+
   .reviews__content {
     margin-bottom: 14px;
+    width: auto;
+    margin-bottom: 27px;
   }
 
   .reviews__name {
@@ -2485,6 +2565,7 @@ a {
   }
 
   .teachers__text {
+    padding: 0 30px;
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 20px;
@@ -2492,6 +2573,18 @@ a {
 
   .trial {
     padding: 24px 0 39px;
+  }
+
+  .trial__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .trial__text {
+    font-size: 16px;
   }
 }
 

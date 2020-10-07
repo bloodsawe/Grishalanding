@@ -1,7 +1,13 @@
 .reviews {
 	padding: 50px 0 136px 0;
 	position: relative;
+	@include mobile {
+		padding: 40px 0 50px 0;
+	}
 	&__wrapper {
+		@include mobile {
+			width: 100% !important;
+		}
 	}
 
 	&__title {
@@ -14,16 +20,29 @@
 		&.controls {
 			position: absolute;
 			top: auto;
-			width: 5%;
+			width: 108px;
 			bottom: -57px;
+		}
+
+		@include mobile {
+			display: none;
 		}
 	}
 	&__slider {
 	}
 
 	&__item {
+		@include mobile {
+			padding: 20px 10px 34px;
+		}
 	}
 	&__block {
+		@include mobile {
+			padding: 16px 10px;
+			background: #ffffff;
+			box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
+			border-radius: 20px;
+		}
 	}
 	&__img {
 		@include size(86, 86);
@@ -31,19 +50,29 @@
 		@include mobile {
 			@include size(53, 53);
 			margin-right: 18px;
+			img {
+				width: 100%;
+			}
 		}
 	}
 	&__content {
 		@include flex(flex-start, center, row);
 		margin-bottom: 27px;
+		@include tablet_md {
+			width: fit-content;
+			margin: 0 auto;
+			margin-bottom: 27px;
+		}
 		@include mobile {
 			margin-bottom: 14px;
+			width: auto;
+			margin-bottom: 27px;
 		}
 	}
 	&__info {
 	}
 	&__name {
-		font-family: "ProximaRegular", serif;
+		font-family: "ProximaBold", serif;
 		font-size: 24px;
 		line-height: 30px;
 		margin-bottom: 7px;
@@ -67,6 +96,34 @@
 		font-size: 16px;
 		line-height: 28px;
 		color: #333333;
+	}
+	.tns-nav {
+		position: relative;
+		width: 120px;
+		height: 2px;
+		margin: 0 auto;
+		background: #af94d1;
+		border-radius: 10px;
+		button {
+			display: none;
+		}
+		button.tns-nav-active {
+			display: block;
+			position: absolute;
+			top: -1px;
+			background: #6832ac;
+			opacity: 1;
+			border-radius: 10px;
+			width: 40px;
+			height: 4px;
+			border: none;
+			&[data-nav="1"] {
+				left: 40px;
+			}
+			&[data-nav="2"] {
+				right: 0;
+			}
+		}
 	}
 }
 
