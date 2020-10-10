@@ -145,6 +145,40 @@
 			top: 122px;
 		}
 	}
+
+	.subjects__desc {
+		display: none;
+		@include mobile {
+			position: absolute;
+			top: 163px;
+			display: block;
+			font-size: 14px;
+			font-weight: normal;
+			color: #26133e;
+			padding-left: 19px;
+			padding-right: 30px;
+			line-height: 24px;
+		}
+	}
+	.subjects__more {
+		display: none;
+		@include mobile {
+			display: block;
+			position: absolute;
+			bottom: 19px;
+			left: 19px;
+			font-size: 14px;
+			color: #6832ac;
+			cursor: pointer;
+			&::before {
+				display: block;
+				position: absolute;
+				top: 1px;
+				right: -10px;
+				content: url(../img/read-more.svg);
+			}
+		}
+	}
 	.dots {
 		position: absolute;
 		top: 0;
@@ -162,6 +196,9 @@
 	p {
 		color: #fff;
 		line-height: 28px;
+	}
+	span {
+		font-weight: 700;
 	}
 	transform: rotateY(180deg);
 	@include mobile {

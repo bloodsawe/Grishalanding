@@ -11,6 +11,7 @@
 		}
 	}
 	&__container {
+		margin-bottom: 46px;
 		@include mobile {
 			padding-left: 16px;
 		}
@@ -36,6 +37,10 @@
 			box-shadow: 0px 2px 15px rgba(74, 74, 74, 0.2);
 			border-radius: 20px;
 		}
+	}
+	&__button {
+		width: 273px;
+		margin: 0 auto;
 	}
 	&__img {
 		@include size(179, 179);
