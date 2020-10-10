@@ -17,6 +17,9 @@
 		line-height: 31px;
 		color: #26133e;
 		margin-bottom: 31px;
+		span {
+			font-weight: 700;
+		}
 		@include mobile {
 			padding: 0 30px;
 			font-size: 14px;
