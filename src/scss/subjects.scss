@@ -1,6 +1,6 @@
 .subjects {
 	padding-top: 50px;
-	padding-bottom: 41px;
+	padding-bottom: 60px;
 	background: #f5f5f5;
 	&__wrapper {
 		@include mobile_sm {
@@ -33,9 +33,17 @@
 			border-radius: 20px;
 		}
 	}
-	// &__img {
-	// 	width: fit-content;
-	// }
+	&__img {
+		@include mobile {
+			position: absolute;
+			top: 64px;
+			left: 50%;
+			transform: translateX(-50%);
+			img {
+				@include size(50, 50);
+			}
+		}
+	}
 	&__text {
 		@include font(18, 31, #26133e);
 		text-align: center;
@@ -61,13 +69,16 @@
 			background: #6832ac;
 			opacity: 1;
 			border-radius: 10px;
-			width: 40px;
+			width: 30px;
 			height: 4px;
 			border: none;
 			&[data-nav="1"] {
-				left: 40px;
+				left: 30px;
 			}
 			&[data-nav="2"] {
+				left: 60px;
+			}
+			&[data-nav="3"] {
 				right: 0;
 			}
 		}
@@ -80,7 +91,9 @@
 /* переверните сторону при проведении мышью */
 .flip-container:hover .flipper,
 .flip-container.hover .flipper {
-	transform: rotateY(180deg);
+	@media (min-width: 576px) {
+		transform: rotateY(180deg);
+	}
 }
 
 .flip-container,
@@ -88,6 +101,10 @@
 .back {
 	// width: 420px;
 	height: 416px;
+	@include mobile {
+		height: 362px;
+		margin-bottom: 47px;
+	}
 }
 
 // /* здесь находится скорость перевертывания */
@@ -110,6 +127,7 @@
 .front {
 	width: 100%;
 	@include flex(center, center, column);
+	z-index: 2;
 	.subjects__img {
 		margin-bottom: 24px;
 	}
@@ -117,17 +135,36 @@
 		font-family: "OpenSansBold", serif;
 		font-size: 36px;
 		color: #26133e;
+		position: absolute;
+		bottom: 100px;
+		@include desktop_xm {
+			font-size: 24px;
+		}
+		@include mobile {
+			font-size: 18px;
+			top: 122px;
+		}
 	}
-	z-index: 2;
+	.dots {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include mobile {
+			width: 92%;
+		}
+	}
 }
 
 // /* обратная, изначально скрытая сторона */
 .back {
 	width: 100%;
-	background: #6832ac;
+	background: #6832ac !important;
 	p {
 		color: #fff;
 		line-height: 28px;
 	}
 	transform: rotateY(180deg);
+	@include mobile {
+		display: none;
+	}
 }

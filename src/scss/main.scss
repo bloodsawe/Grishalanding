@@ -39,6 +39,7 @@ a {
 	outline: none;
 	border: none;
 	text-align: center;
+	font-weight: 700;
 }
 .title {
 	@include font(36, 45, #26133e);

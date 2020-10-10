@@ -50,7 +50,12 @@
 			@include position-center();
 		}
 		@include mobile {
+			background: #f5f5f5;
+			box-shadow: none;
 			@include size(150, 150);
+			img {
+				width: 72px;
+			}
 		}
 	}
 	&__text {
