@@ -14,9 +14,6 @@
 		width: 25%;
 		min-width: 487px;
 		margin-left: auto;
-		@include tablet_md {
-			min-width: 400px;
-		}
 		@include tablet_sm {
 			min-width: 380px;
 		}
