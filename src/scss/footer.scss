@@ -19,6 +19,7 @@
 	&__logo {
 		display: block;
 		margin-right: 251px;
+		width: 188px;
 		@include mobile {
 			@include size(188, 162);
 			margin: 0 auto;

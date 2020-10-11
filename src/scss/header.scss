@@ -54,6 +54,7 @@
 	}
 	&__logo {
 		display: block;
+		width: 164px;
 		@include mobile {
 			width: 132px;
 		}

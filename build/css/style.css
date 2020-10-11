@@ -724,6 +724,7 @@ a {
 .footer__logo {
   display: block;
   margin-right: 251px;
+  width: 188px;
 }
 
 .footer__logo img {
@@ -788,6 +789,7 @@ a {
 
 .header__logo {
   display: block;
+  width: 164px;
 }
 
 .header__logo img {
