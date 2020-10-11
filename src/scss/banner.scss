@@ -1,14 +1,12 @@
 .banner {
 	position: relative;
 	padding: 314px 0 325px;
-	background-color: #6832ac;
-	background: url(../img/desktop-bg-2.png) no-repeat center/cover;
-
+	background: url(../img/desktop-bg-2.png) no-repeat center/cover #6832ac;
 	@include tablet {
 		padding: 178px 0 177px;
 	}
 	@include mobile {
-		background: url(../img/mobile-bg.png) no-repeat center/cover;
+		background: url(../img/mobile-bg.png) no-repeat center/cover #6832ac;
 		padding: 178px 0 53px;
 	}
 	&__wrapper {

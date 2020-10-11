@@ -7,7 +7,6 @@
 		@include flex(space-between, stretch, row);
 		@include mobile {
 			width: 85%;
-
 			flex-direction: column;
 		}
 	}

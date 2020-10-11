@@ -5,15 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function main() {
 	stickyHeader();
 	mobileMenu();
-	// timer();
-	sliderInit();
 	closeModal();
-	let slidersRules = document.querySelectorAll(".rules__block");
-	let slidersOnline = document.querySelectorAll(".online__block");
-	let slidersCosts = document.querySelectorAll(".costs__block");
+	sliderInit();
+	const slidersRules = document.querySelectorAll(".rules__block");
+	const slidersOnline = document.querySelectorAll(".online__block");
+	const slidersCosts = document.querySelectorAll(".costs__block");
 	maxSliderHeight(slidersOnline);
 	maxSliderHeight(slidersRules);
 	maxSliderHeight(slidersCosts);
 	questions();
-	// progress();
 }

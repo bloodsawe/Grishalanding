@@ -3004,22 +3004,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function main() {
   stickyHeader();
-  mobileMenu(); // timer();
-
-  sliderInit();
+  mobileMenu();
   closeModal();
+  sliderInit();
   var slidersRules = document.querySelectorAll(".rules__block");
   var slidersOnline = document.querySelectorAll(".online__block");
   var slidersCosts = document.querySelectorAll(".costs__block");
   maxSliderHeight(slidersOnline);
   maxSliderHeight(slidersRules);
   maxSliderHeight(slidersCosts);
-  questions(); // progress();
+  questions();
 }
 
 var formId = "telegramForm";
 var form = document.getElementById(formId);
-var subfooterForm = document.getElementById("telegramSubfooterForm"); //функция для захвата данных из тегов формы и синтеза JSON-обьекта
+var subfooterForm = document.getElementById("telegramSubfooterForm");
 
 function toJSONString(form) {
   var obj = {};
@@ -3038,101 +3037,33 @@ function toJSONString(form) {
   return JSON.stringify(obj);
 }
 
-function toJSONStringSubfooter(subfooterForm) {
-  var obj = {};
-  var elements = subfooterForm.querySelectorAll("input, select, textarea");
+function postApi(selectForm) {
+  selectForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var json = toJSONString(selectForm);
+    var formReq = new XMLHttpRequest();
+    formReq.open("POST", "https://youstud.herokuapp.com/api/telegram/message", true);
 
-  for (var i = 0; i < elements.length; ++i) {
-    var element = elements[i];
-    var name = element.name;
-    var value = element.value;
+    formReq.onload = function (oEvent) {
+      if (formReq.status === 200) {
+        document.querySelector(".modal").style.display = "block";
+        document.body.style.overflow = "hidden";
+      } // if (formReq.status !== 200) {
+      // }
 
-    if (name) {
-      obj[name] = value;
-    }
-  }
+    };
 
-  return JSON.stringify(obj);
+    formReq.setRequestHeader("Content-Type", "application/json");
+    formReq.send(json);
+  });
 }
 
 if (form) {
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); //получаем данные из формы
-
-    var json = toJSONString(form);
-    console.log("json: ", json); //создаем соединение
-
-    var formReq = new XMLHttpRequest();
-    formReq.open("POST", "https://you-stud-back.herokuapp.com/api/telegram/message", true); //обрабатываем ответ сервер
-
-    formReq.onload = function (oEvent) {
-      if (formReq.status === 200) {
-        // swal({
-        // 	title: "Успешно отправлено!",
-        // 	icon: "success",
-        // 	timer: 2000,
-        // });
-        document.querySelector(".modal").style.display = "block";
-        document.body.style.overflow = "hidden";
-      } // if (formReq.status !== 200) {
-      // 	swal({
-      // 		title: "Произошла ошибка!",
-      // 		icon: "error",
-      // 		timer: 2000,
-      // 	});
-      // 	document.querySelector(".sa-error").style.display = "block";
-      // 	document.querySelector(".sa-button-container").style.opacity =
-      // 		"0";
-      // }
-
-    }; ////////////////////////////
-    ////////////////////////////
-
-
-    formReq.setRequestHeader("Content-Type", "application/json"); //отправляем
-
-    formReq.send(json);
-  });
+  postApi(form);
 }
 
 if (subfooterForm) {
-  subfooterForm.addEventListener("submit", function (event) {
-    event.preventDefault(); //получаем данные из формы
-
-    var json = toJSONStringSubfooter(subfooterForm);
-    console.log("json: ", json); //создаем соединение
-
-    var formReq = new XMLHttpRequest();
-    formReq.open("POST", "https://you-stud-back.herokuapp.com/api/telegram/message", true); //обрабатываем ответ сервера
-
-    formReq.onload = function (oEvent) {
-      if (formReq.status === 200) {
-        // swal({
-        // 	title: "Успешно отправлено!",
-        // 	icon: "success",
-        // 	timer: 2000,
-        // });
-        document.querySelector(".modal").style.display = "block";
-        document.body.style.overflow = "hidden";
-      } // if (formReq.status !== 200) {
-      // 	swal({
-      // 		title: "Произошла ошибка!",
-      // 		icon: "error",
-      // 		timer: 2000,
-      // 	});
-      // 	document.querySelector(".sa-error").style.display = "block";
-      // 	document.querySelector(".sa-button-container").style.opacity =
-      // 		"0";
-      // }
-
-    }; ////////////////////////////
-    ////////////////////////////
-
-
-    formReq.setRequestHeader("Content-Type", "application/json"); //отправляем
-
-    formReq.send(json);
-  });
+  postApi(subfooterForm);
 }
 
 function stickyHeader() {
@@ -3157,12 +3088,13 @@ function mobileMenu() {
 
 function maxSliderHeight(sliders) {
   var max = 0;
-  sliders.forEach(function (e) {
-    if (e.clientHeight > max) {
-      max = e.clientHeight;
+  sliders.forEach(function (_ref) {
+    var clientHeight = _ref.clientHeight;
+
+    if (clientHeight > max) {
+      max = clientHeight;
     }
   });
-  console.log(max);
   sliders.forEach(function (e) {
     e.style.height = "".concat(max + 15, "px");
   });
@@ -3170,8 +3102,8 @@ function maxSliderHeight(sliders) {
 
 function closeModal(params) {
   var modal = document.querySelector(".modal");
-  modal.addEventListener("click", function (_ref) {
-    var target = _ref.target;
+  modal.addEventListener("click", function (_ref2) {
+    var target = _ref2.target;
 
     if (target.classList.contains("modal") || target.closest(".modal__close") || target.closest(".modal__button")) {
       modal.style.display = "none";
@@ -3182,9 +3114,8 @@ function closeModal(params) {
 
 function questions() {
   var container = document.querySelector(".questions__container");
-  console.log("fas");
-  container.addEventListener("click", function (_ref2) {
-    var target = _ref2.target;
+  container.addEventListener("click", function (_ref3) {
+    var target = _ref3.target;
     var item = target.closest(".questions__item");
     item.querySelector(".questions__text").classList.toggle("open");
     item.querySelector(".questions__plus").classList.toggle("open");
@@ -3273,48 +3204,4 @@ function sliderInit() {
       }
     }
   });
-}
-
-function timer() {
-  var timerItems = document.querySelectorAll(".timers__item");
-  var documentHeight = document.documentElement.clientHeight;
-  var timerContainer = document.querySelector(".timers__container").offsetTop;
-  var flag = true;
-  window.addEventListener("scroll", function (e) {
-    var distanceScroll = timerContainer - window.pageYOffset - documentHeight;
-
-    if (distanceScroll <= 0 && flag) {
-      timerItems.forEach(function (item, i) {
-        timerCount(item, i);
-        progress(item);
-      });
-      flag = false;
-    }
-  });
-} // TODO: removeEventListener
-
-
-function timerCount(timer, index, timersFlags) {
-  var text = timer.querySelector(".timer__percent");
-  var i = 0;
-  var interval = setInterval(function () {
-    text.textContent = "".concat(i, "%");
-    i++;
-
-    if (i > 100) {
-      clearInterval(interval);
-    }
-  }, 10);
-}
-
-function progress(item) {
-  var bar = new ProgressBar.Circle(item, {
-    strokeWidth: 1,
-    easing: "linear",
-    duration: 1000,
-    color: "#6832ac",
-    trailWidth: 0.1,
-    svgStyle: null
-  });
-  bar.animate(1.0);
 }
