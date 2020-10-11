@@ -12,7 +12,6 @@
 			<!-- <p class="banner__text">Можливість навчатися від 1 до 11 классу</p> -->
 		</div>
 		<form
-			action="/message"
 			method="post"
 			class="banner__form form"
 			id="telegramForm"
@@ -34,9 +33,10 @@
 				<input
 					class="form__input input"
 					type="tel"
-					name="tel"
-					id="tel"
+					name="number"
+					id="number"
 					placeholder="Номер телефону:"
+					required
 				/>
 				<button class="form__button button">Зареєструватись</button>
 				<p class="form__text form__text_center form__text_fz">

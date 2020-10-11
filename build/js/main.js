@@ -3007,6 +3007,7 @@ function main() {
   mobileMenu(); // timer();
 
   sliderInit();
+  closeModal();
   var slidersRules = document.querySelectorAll(".rules__block");
   var slidersOnline = document.querySelectorAll(".online__block");
   var slidersCosts = document.querySelectorAll(".costs__block");
@@ -3014,6 +3015,124 @@ function main() {
   maxSliderHeight(slidersRules);
   maxSliderHeight(slidersCosts);
   questions(); // progress();
+}
+
+var formId = "telegramForm";
+var form = document.getElementById(formId);
+var subfooterForm = document.getElementById("telegramSubfooterForm"); //функция для захвата данных из тегов формы и синтеза JSON-обьекта
+
+function toJSONString(form) {
+  var obj = {};
+  var elements = form.querySelectorAll("input, select, textarea");
+
+  for (var i = 0; i < elements.length; ++i) {
+    var element = elements[i];
+    var name = element.name;
+    var value = element.value;
+
+    if (name) {
+      obj[name] = value;
+    }
+  }
+
+  return JSON.stringify(obj);
+}
+
+function toJSONStringSubfooter(subfooterForm) {
+  var obj = {};
+  var elements = subfooterForm.querySelectorAll("input, select, textarea");
+
+  for (var i = 0; i < elements.length; ++i) {
+    var element = elements[i];
+    var name = element.name;
+    var value = element.value;
+
+    if (name) {
+      obj[name] = value;
+    }
+  }
+
+  return JSON.stringify(obj);
+}
+
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); //получаем данные из формы
+
+    var json = toJSONString(form);
+    console.log("json: ", json); //создаем соединение
+
+    var formReq = new XMLHttpRequest();
+    formReq.open("POST", "https://you-stud-back.herokuapp.com/api/telegram/message", true); //обрабатываем ответ сервера
+
+    formReq.onload = function (oEvent) {
+      if (formReq.status === 200) {
+        // swal({
+        // 	title: "Успешно отправлено!",
+        // 	icon: "success",
+        // 	timer: 2000,
+        // });
+        document.querySelector(".modal").style.display = "block";
+        document.body.style.overflow = "hidden";
+      } // if (formReq.status !== 200) {
+      // 	swal({
+      // 		title: "Произошла ошибка!",
+      // 		icon: "error",
+      // 		timer: 2000,
+      // 	});
+      // 	document.querySelector(".sa-error").style.display = "block";
+      // 	document.querySelector(".sa-button-container").style.opacity =
+      // 		"0";
+      // }
+
+    }; ////////////////////////////
+    ////////////////////////////
+
+
+    formReq.setRequestHeader("Content-Type", "application/json"); //отправляем
+
+    formReq.send(json);
+  });
+}
+
+if (subfooterForm) {
+  subfooterForm.addEventListener("submit", function (event) {
+    event.preventDefault(); //получаем данные из формы
+
+    var json = toJSONStringSubfooter(subfooterForm);
+    console.log("json: ", json); //создаем соединение
+
+    var formReq = new XMLHttpRequest();
+    formReq.open("POST", "https://you-stud-back.herokuapp.com/api/telegram/message", true); //обрабатываем ответ сервера
+
+    formReq.onload = function (oEvent) {
+      if (formReq.status === 200) {
+        // swal({
+        // 	title: "Успешно отправлено!",
+        // 	icon: "success",
+        // 	timer: 2000,
+        // });
+        document.querySelector(".modal").style.display = "block";
+        document.body.style.overflow = "hidden";
+      } // if (formReq.status !== 200) {
+      // 	swal({
+      // 		title: "Произошла ошибка!",
+      // 		icon: "error",
+      // 		timer: 2000,
+      // 	});
+      // 	document.querySelector(".sa-error").style.display = "block";
+      // 	document.querySelector(".sa-button-container").style.opacity =
+      // 		"0";
+      // }
+
+    }; ////////////////////////////
+    ////////////////////////////
+
+
+    formReq.setRequestHeader("Content-Type", "application/json"); //отправляем
+
+    formReq.send(json);
+  });
 }
 
 function stickyHeader() {
@@ -3049,11 +3168,23 @@ function maxSliderHeight(sliders) {
   });
 }
 
+function closeModal(params) {
+  var modal = document.querySelector(".modal");
+  modal.addEventListener("click", function (_ref) {
+    var target = _ref.target;
+
+    if (target.classList.contains("modal") || target.closest(".modal__close") || target.closest(".modal__button")) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+}
+
 function questions() {
   var container = document.querySelector(".questions__container");
   console.log("fas");
-  container.addEventListener("click", function (_ref) {
-    var target = _ref.target;
+  container.addEventListener("click", function (_ref2) {
+    var target = _ref2.target;
     var item = target.closest(".questions__item");
     item.querySelector(".questions__text").classList.toggle("open");
     item.querySelector(".questions__plus").classList.toggle("open");

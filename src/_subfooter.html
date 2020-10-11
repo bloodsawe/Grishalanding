@@ -6,24 +6,35 @@
 			<h3 class="subfooter__title">Залишилися питання?</h3>
 			<p class="subfooter__text">Заповни форму та ми зв’яжемося з вами</p>
 		</div>
-		<form action="post" class="subfooter__form">
+		<form
+			action="/message"
+			method="post"
+			id="telegramSubfooterForm"
+			enctype="application/x-www-form-urlencoded"
+			class="subfooter__form"
+		>
 			<p class="subfooter__label">Залишити заявку:</p>
 			<div class="subfooter__container">
 				<div class="subfooter__input-container">
 					<input
 						class="subfooter__input input"
 						type="text"
+						name="name"
+						id="footerName"
 						placeholder="Ім‘я:"
 					/>
 					<input
 						class="subfooter__input input"
 						type="tel"
+						name="number"
+						id="numberFooter"
 						placeholder="Номер телефону:"
+						require
 					/>
 				</div>
 				<textarea
-					name=""
-					id=""
+					name="message"
+					id="message"
 					placeholder="Ваші побажання:"
 					class="subfooter__textarea"
 				></textarea>

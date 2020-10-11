@@ -1,0 +1,45 @@
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	// background-color: rgba(0, 0, 0, 0.3);
+	&__container {
+		position: absolute;
+		width: 75%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 411px;
+		padding: 52px 38px 68px;
+		background: #ffffff;
+		box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
+		border-radius: 20px;
+	}
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+		color: #6832ac;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	&__text {
+		font-weight: 700;
+		text-align: center;
+		color: #26133e;
+		margin-bottom: 47px;
+	}
+	&__close {
+		position: absolute;
+		padding: 10px;
+		top: 14px;
+		right: 14px;
+		cursor: pointer;
+	}
+	&__button {
+		font-weight: 700;
+		color: #ffffff;
+	}
+}

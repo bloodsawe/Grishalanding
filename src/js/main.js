@@ -7,6 +7,7 @@ function main() {
 	mobileMenu();
 	// timer();
 	sliderInit();
+	closeModal();
 	let slidersRules = document.querySelectorAll(".rules__block");
 	let slidersOnline = document.querySelectorAll(".online__block");
 	let slidersCosts = document.querySelectorAll(".costs__block");
