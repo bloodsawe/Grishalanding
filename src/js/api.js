@@ -42,7 +42,7 @@ if (form) {
 			true
 		);
 
-		//обрабатываем ответ сервера
+		//обрабатываем ответ сервер
 		formReq.onload = function (oEvent) {
 			if (formReq.status === 200) {
 				// swal({

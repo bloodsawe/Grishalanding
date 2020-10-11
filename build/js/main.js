@@ -3063,7 +3063,7 @@ if (form) {
     console.log("json: ", json); //создаем соединение
 
     var formReq = new XMLHttpRequest();
-    formReq.open("POST", "https://you-stud-back.herokuapp.com/api/telegram/message", true); //обрабатываем ответ сервера
+    formReq.open("POST", "https://you-stud-back.herokuapp.com/api/telegram/message", true); //обрабатываем ответ сервер
 
     formReq.onload = function (oEvent) {
       if (formReq.status === 200) {
