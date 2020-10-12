@@ -86,14 +86,21 @@
 	}
 
 	&__mobile-logo {
-		margin-bottom: 38px;
+		display: none;
+		@include mobile {
+			display: block;
+			margin-bottom: 38px;
+		}
 	}
 	&__links {
-		display: flex;
-		a {
-			margin-left: 15px;
-			&:nth-child(1) {
-				margin-left: 0;
+		display: none;
+		@include mobile {
+			display: flex;
+			a {
+				margin-left: 15px;
+				&:nth-child(1) {
+					margin-left: 0;
+				}
 			}
 		}
 	}
