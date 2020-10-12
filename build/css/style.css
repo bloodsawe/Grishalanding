@@ -594,7 +594,7 @@ textarea {
   background: #311456;
   width: 100%;
   height: 185px;
-  padding-top: 21px;
+  padding-top: 69px;
   padding-bottom: 186px;
 }
 
@@ -652,6 +652,7 @@ textarea {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  padding: 25px 0;
 }
 
 .header__wrapper {
@@ -716,6 +717,25 @@ textarea {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.nav__mobile-logo {
+  margin-bottom: 38px;
+}
+
+.nav__links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__links a {
+  margin-left: 15px;
+}
+
+.nav__links a:nth-child(1) {
+  margin-left: 0;
 }
 
 .nav__open {
@@ -2031,7 +2051,7 @@ textarea {
   }
 
   .banner {
-    background: url(../img/mobile-bg.png) no-repeat center/cover #6832ac;
+    background: url(../img/mobile-bg.png) no-repeat top/cover #6832ac;
     padding: 178px 0 53px;
   }
 
@@ -2114,9 +2134,12 @@ textarea {
   }
 
   .footer__logo {
-    width: 188px;
-    height: 162px;
     margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  .footer__nav {
+    padding-left: 52px;
   }
 
   .header__wrapper {
@@ -2167,7 +2190,7 @@ textarea {
   .nav {
     position: fixed;
     width: 280px;
-    height: 80vh;
+    height: 559px;
     min-width: auto;
     top: 0;
     left: 0;
@@ -2196,6 +2219,10 @@ textarea {
   .nav__link {
     color: #26133e;
     font-weight: normal;
+  }
+
+  .nav__link_mb {
+    margin-bottom: 42px;
   }
 
   .nav__info {
