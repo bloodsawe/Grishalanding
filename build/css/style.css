@@ -1869,6 +1869,10 @@ textarea {
     margin-bottom: 40px;
   }
 
+  .subjects__wrapper {
+    width: 84%;
+  }
+
   .front p {
     font-size: 24px;
   }

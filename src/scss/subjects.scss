@@ -3,6 +3,9 @@
 	padding-bottom: 60px;
 	background: #f5f5f5;
 	&__wrapper {
+		@include desktop_xm {
+			width: 84%;
+		}
 		@include mobile_sm {
 			width: 100% !important;
 		}
