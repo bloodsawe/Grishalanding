@@ -65,7 +65,7 @@
 	}
 	&__text {
 		@include font(18, 31, #26133e);
-		font-family: "ProximaBold", serif;
+		// font-family: "ProximaBold", serif;
 		text-align: center;
 		@include mobile {
 			font-size: 16px;
