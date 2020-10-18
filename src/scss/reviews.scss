@@ -138,6 +138,7 @@
 	z-index: 100;
 	&__button {
 		position: absolute;
+		@include flex(center, center, row);
 		z-index: 10;
 		@include size(50, 50);
 		background: #6832ac;
@@ -148,22 +149,6 @@
 		}
 		&:focus {
 			outline: none;
-		}
-		&_prev,
-		&_next {
-			span {
-				@include position-center();
-				@include size(7, 2);
-				background: #f5f5f5;
-			}
-			span:nth-child(1) {
-				top: 46%;
-				transform: rotate(45deg);
-			}
-			span:nth-child(2) {
-				top: 54%;
-				transform: rotate(-45deg);
-			}
 		}
 		&_prev {
 			left: -25px;
