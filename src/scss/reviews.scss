@@ -37,6 +37,7 @@
 		}
 	}
 	&__block {
+		display: block;
 		@include mobile {
 			padding: 16px 10px;
 			background: #ffffff;

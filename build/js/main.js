@@ -3010,9 +3010,11 @@ function main() {
   var slidersRules = document.querySelectorAll(".rules__block");
   var slidersOnline = document.querySelectorAll(".online__block");
   var slidersCosts = document.querySelectorAll(".costs__block");
+  var reviewsBlock = document.querySelectorAll(".reviews__block");
   maxSliderHeight(slidersOnline);
   maxSliderHeight(slidersRules);
   maxSliderHeight(slidersCosts);
+  maxSliderHeight(reviewsBlock);
   questions();
 }
 
