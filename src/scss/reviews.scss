@@ -47,12 +47,12 @@
 	&__img {
 		@include size(86, 86);
 		margin-right: 23px;
+		img {
+			width: 100%;
+		}
 		@include mobile {
 			@include size(53, 53);
 			margin-right: 18px;
-			img {
-				width: 100%;
-			}
 		}
 	}
 	&__content {

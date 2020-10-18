@@ -1070,6 +1070,10 @@ textarea {
   margin-right: 23px;
 }
 
+.reviews__img img {
+  width: 100%;
+}
+
 .reviews__content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2363,10 +2367,6 @@ textarea {
     width: 53px;
     height: 53px;
     margin-right: 18px;
-  }
-
-  .reviews__img img {
-    width: 100%;
   }
 
   .reviews__content {
