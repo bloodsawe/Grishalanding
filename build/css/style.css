@@ -1520,7 +1520,6 @@ textarea {
   position: relative;
 }
 
-.front,
 .back {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
