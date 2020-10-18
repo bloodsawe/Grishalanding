@@ -3135,6 +3135,7 @@ function sliderInit() {
       autoplayButtonOutput: false,
       startIndex: 0,
       controls: false,
+      swipeAngle: 0,
       navAsThumbnails: true,
       nav: true,
       navPosition: "bottom"
@@ -3149,6 +3150,8 @@ function sliderInit() {
       autoplayButtonOutput: false,
       startIndex: 0,
       controls: false,
+      mouseDrag: true,
+      swipeAngle: 0,
       navAsThumbnails: true,
       nav: true,
       navPosition: "bottom"
@@ -3160,7 +3163,9 @@ function sliderInit() {
       loop: false,
       autoplayButton: true,
       autoplayButtonOutput: false,
+      mouseDrag: true,
       startIndex: 0,
+      swipeAngle: 0,
       controls: false,
       navAsThumbnails: true,
       nav: true,
@@ -3175,6 +3180,8 @@ function sliderInit() {
       autoplayButtonOutput: false,
       startIndex: 0,
       controls: false,
+      mouseDrag: true,
+      swipeAngle: 0,
       navAsThumbnails: true,
       nav: true,
       navPosition: "bottom"
@@ -3195,6 +3202,8 @@ function sliderInit() {
     nav: true,
     controlsContainer: ".reviews__controls",
     navPosition: "bottom",
+    mouseDrag: true,
+    swipeAngle: 0,
     responsive: {
       768: {
         items: 3,
