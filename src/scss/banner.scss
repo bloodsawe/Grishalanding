@@ -1,13 +1,86 @@
 .banner {
 	position: relative;
 	padding: 166px 0 325px;
-	background: url(../img/desktop-bg-2.png) no-repeat center/cover #6832ac;
+	background: #6832ac;
 	@include tablet {
 		padding: 178px 0 177px;
 	}
 	@include mobile {
-		background: url(../img/mobile-bg.png) no-repeat top/cover #6832ac;
+		background: #6832ac;
 		padding: 178px 0 53px;
+	}
+	.icon {
+		position: absolute;
+		//
+		&-1 {
+			top: 268px;
+			left: 0;
+			@include mobile {
+				width: 10%;
+			}
+		}
+		//
+		&-3 {
+			bottom: 52%;
+			right: 36%;
+			@include tablet {
+				bottom: 30%;
+				right: 68%;
+			}
+			@include mobile {
+				bottom: 40%;
+				right: 86%;
+				width: 9%;
+			}
+		}
+		//
+		&-4 {
+			top: 0;
+			right: 0;
+			@include mobile {
+				display: none;
+			}
+		}
+		//
+		&-5 {
+			bottom: 130px;
+			left: 6%;
+			@include mobile {
+				left: 1%;
+			}
+		}
+		//
+		&-6 {
+			bottom: 183px;
+			left: 28%;
+			@include mobile {
+				bottom: 387px;
+				left: 70%;
+				width: 25px;
+			}
+		}
+		//
+		&-7 {
+			bottom: 0;
+			left: 30%;
+		}
+		&-8 {
+			bottom: 280px;
+			right: 45%;
+			@include mobile {
+				top: 362px;
+				right: 0;
+				width: 5%;
+			}
+		}
+		//
+		&-9 {
+			bottom: 0;
+			right: 0;
+			@include mobile {
+				width: 21%;
+			}
+		}
 	}
 	&__wrapper {
 		@include flex(space-between, center, row);
@@ -70,6 +143,9 @@
 	background: #ffffff;
 	box-shadow: 10px 4px 40px rgba(31, 12, 55, 0.4);
 	border-radius: 20px;
+	@include desktop_xxl {
+		width: 402px;
+	}
 	@include mobile_sm {
 		width: 280px;
 	}

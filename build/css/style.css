@@ -342,7 +342,51 @@ textarea {
 .banner {
   position: relative;
   padding: 166px 0 325px;
-  background: url(../img/desktop-bg-2.png) no-repeat center/cover #6832ac;
+  background: #6832ac;
+}
+
+.banner .icon {
+  position: absolute;
+}
+
+.banner .icon-1 {
+  top: 268px;
+  left: 0;
+}
+
+.banner .icon-3 {
+  bottom: 52%;
+  right: 36%;
+}
+
+.banner .icon-4 {
+  top: 0;
+  right: 0;
+}
+
+.banner .icon-5 {
+  bottom: 130px;
+  left: 6%;
+}
+
+.banner .icon-6 {
+  bottom: 183px;
+  left: 28%;
+}
+
+.banner .icon-7 {
+  bottom: 0;
+  left: 30%;
+}
+
+.banner .icon-8 {
+  bottom: 280px;
+  right: 45%;
+}
+
+.banner .icon-9 {
+  bottom: 0;
+  right: 0;
 }
 
 .banner__wrapper {
@@ -626,6 +670,10 @@ textarea {
 
 .footer__logo img {
   width: 100%;
+}
+
+.footer__social a {
+  margin-right: 21px;
 }
 
 .footer__link {
@@ -1829,6 +1877,10 @@ textarea {
     font-size: calc( 14px + 8 * (100vw / 1920));
   }
 
+  .form {
+    width: 402px;
+  }
+
   .info__img img {
     width: -webkit-calc(100vw * 0.35);
     width: calc(100vw * 0.35);
@@ -1885,6 +1937,11 @@ textarea {
     padding: 178px 0 177px;
   }
 
+  .banner .icon-3 {
+    bottom: 30%;
+    right: 68%;
+  }
+
   .banner__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1895,6 +1952,10 @@ textarea {
 
   .banner__content {
     margin-bottom: 48px;
+  }
+
+  .footer__logo {
+    margin-right: 171px;
   }
 
   .subfooter__form {
@@ -2031,8 +2092,42 @@ textarea {
   }
 
   .banner {
-    background: url(../img/mobile-bg.png) no-repeat top/cover #6832ac;
+    background: #6832ac;
     padding: 178px 0 53px;
+  }
+
+  .banner .icon-1 {
+    width: 10%;
+  }
+
+  .banner .icon-3 {
+    bottom: 40%;
+    right: 86%;
+    width: 9%;
+  }
+
+  .banner .icon-4 {
+    display: none;
+  }
+
+  .banner .icon-5 {
+    left: 1%;
+  }
+
+  .banner .icon-6 {
+    bottom: 387px;
+    left: 70%;
+    width: 25px;
+  }
+
+  .banner .icon-8 {
+    top: 362px;
+    right: 0;
+    width: 5%;
+  }
+
+  .banner .icon-9 {
+    width: 21%;
   }
 
   .banner__wrapper {

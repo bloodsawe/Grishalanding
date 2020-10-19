@@ -20,6 +20,9 @@
 		display: block;
 		margin-right: 251px;
 		width: 188px;
+		@include tablet {
+			margin-right: 171px;
+		}
 		@include mobile {
 			margin: 0 auto;
 			margin-bottom: 25px;
@@ -31,6 +34,11 @@
 	&__nav {
 		@include mobile {
 			padding-left: 52px;
+		}
+	}
+	&__social {
+		a {
+			margin-right: 21px;
 		}
 	}
 	&__link {
