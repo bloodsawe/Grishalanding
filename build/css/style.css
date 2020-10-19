@@ -354,6 +354,11 @@ textarea {
   left: 0;
 }
 
+.banner .icon-2 {
+  top: 181px;
+  left: 36%;
+}
+
 .banner .icon-3 {
   bottom: 52%;
   right: 36%;
@@ -1937,6 +1942,11 @@ textarea {
     padding: 178px 0 177px;
   }
 
+  .banner .icon-2 {
+    top: 126px;
+    left: 59%;
+  }
+
   .banner .icon-3 {
     bottom: 30%;
     right: 68%;
@@ -2098,6 +2108,12 @@ textarea {
 
   .banner .icon-1 {
     width: 10%;
+  }
+
+  .banner .icon-2 {
+    width: 25px;
+    top: 173px;
+    left: 73%;
   }
 
   .banner .icon-3 {
