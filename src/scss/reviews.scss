@@ -115,13 +115,19 @@
 			background: #6832ac;
 			opacity: 1;
 			border-radius: 10px;
-			width: 40px;
+			width: 24px;
 			height: 4px;
 			border: none;
 			&[data-nav="1"] {
-				left: 40px;
+				left: 24px;
 			}
 			&[data-nav="2"] {
+				left: 48px;
+			}
+			&[data-nav="3"] {
+				left: 72px;
+			}
+			&[data-nav="4"] {
 				right: 0;
 			}
 		}
