@@ -2564,7 +2564,7 @@ textarea {
 
   .subjects__img {
     position: absolute;
-    top: 64px;
+    top: 54px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -2584,18 +2584,18 @@ textarea {
   .flip-container,
   .front,
   .back {
-    height: 362px;
+    height: 382px;
     margin-bottom: 47px;
   }
 
   .front p {
     font-size: 18px;
-    top: 122px;
+    top: 112px;
   }
 
   .front .subjects__desc {
     position: absolute;
-    top: 163px;
+    top: 142px;
     display: block;
     font-size: 14px;
     font-weight: normal;
